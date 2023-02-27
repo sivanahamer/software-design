@@ -2,6 +2,6 @@
 sidebar_position: 1
 ---
 
-# Patrónes creacionales
+# Introducción
 
 HERE WILL BE TEXT.
