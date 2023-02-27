@@ -1,7 +1,8 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
+sidebar_label: 'Introducción'
 ---
 
-# Introducción
+# Introducción al diseño de software
 
 HERE WILL BE TEXT.

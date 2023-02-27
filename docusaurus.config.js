@@ -71,12 +71,12 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'README',
             position: 'left',
             label: 'Clases',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/sivanahamer/software-design',
             label: 'GitHub',
             position: 'right',
           },
