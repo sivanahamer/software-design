@@ -3,7 +3,6 @@ import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import WhatIs from '@site/src/components/WhatIs';
-
 import styles from './index.module.css';
 
 function HomepageHeader() {
@@ -23,11 +22,11 @@ export default function Home() {
     <Layout
       title={`${siteConfig.title}`}>
       <HomepageHeader />
+      <img src={require('@site/static/animation.gif').default} alt="loading..." />
       <main>
         <WhatIs />
-
-        
       </main>
+
     </Layout>
   );
 }
