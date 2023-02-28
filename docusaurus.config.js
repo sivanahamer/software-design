@@ -45,10 +45,6 @@ const config = {
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -65,7 +61,7 @@ const config = {
       navbar: {
         title: 'Diseño de software',
         logo: {
-          alt: 'Software design Logo',
+          alt: 'Software design logo',
           src: 'img/logo.png',
         },
         items: [
@@ -76,6 +72,11 @@ const config = {
             label: 'Clases',
           },
           {
+            href: 'https://mv1.mediacionvirtual.ucr.ac.cr/course/view.php?id=29989',
+            label: 'Mediación',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/sivanahamer/software-design',
             label: 'GitHub',
             position: 'right',
@@ -83,12 +84,11 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
         copyright: `Copyright © ${new Date().getFullYear()}, Sivana Hamer. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. Built with Docusaurus.`,
       },
       prism: {
-        theme: lightCodeTheme,
-        lightTheme: darkCodeTheme,
+        theme: darkCodeTheme,
+        lightTheme: lightCodeTheme,
       },
     }),
 };

@@ -21,11 +21,12 @@ export default function Home() {
   return (
     <Layout
       title={`${siteConfig.title}`}>
+              <img src={require('@site/static/animation.gif').default} alt="loading..." />
       <HomepageHeader />
-      <img src={require('@site/static/animation.gif').default} alt="loading..." />
       <main>
         <WhatIs />
       </main>
+
 
     </Layout>
   );
