@@ -25,6 +25,6 @@ Patrónes de software lo vamos a ver en mayor granularidad en el futuro.
 
 :::tip
 
-La presentación del tema se encuentra en el siguiente enlace.
+La presentación del tema se encuentra en el [siguiente enlace](design.pdf).
 
 :::
