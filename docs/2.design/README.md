@@ -25,6 +25,6 @@ Patrónes de software lo vamos a ver en mayor granularidad en el futuro.
 
 :::tip
 
-La presentación del tema se encuentra en el [siguiente enlace](design.pdf).
+La presentación del tema se encuentra en el [siguiente enlace](https://github.com/sivanahamer/software-design/blob/main/docs/2.design/design.pdf).
 
 :::

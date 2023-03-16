@@ -14,6 +14,6 @@ En esta sección, vamos a introducir la relevancia, importancia y conceptos gene
 
 :::tip
 
-La presentación del tema se encuentra en el [siguiente enlace](intro.pdf).
+La presentación del tema se encuentra en el [siguiente enlace](https://github.com/sivanahamer/software-design/blob/main/docs/1.intro/intro.pdf).
 
 :::
