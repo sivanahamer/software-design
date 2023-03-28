@@ -8,6 +8,6 @@ Al desarrollar, se genera una gran cantidad de artefactos de software. Por ejemp
 
 :::tip
 
-La presentación del tema se encuentra en el siguiente enlace.
+La presentación del tema se encuentra en el [siguiente enlace](https://github.com/sivanahamer/software-design/blob/main/docs/4.repos/repos.pdf)
 
 :::

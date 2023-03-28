@@ -8,6 +8,6 @@ Se representan los diseños de software a través de modelos formales o informal
 
 :::tip
 
-La presentación del tema se encuentra en el siguiente enlace.
+La presentación del tema se encuentra en el [siguiente enlace](https://github.com/sivanahamer/software-design/blob/main/docs/3.uml/uml.pdf)
 
 :::
