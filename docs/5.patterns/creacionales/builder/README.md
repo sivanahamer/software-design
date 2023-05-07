@@ -60,6 +60,15 @@ Se debe implementar un método para obtener el resultado de la construcción (`g
 * Aunque no es necesario, considere implementar la clase `Director`, puede ayudar a encapsular varias formas de construir un objeto `Product` utilizando el mismo objeto ConcreteBuilder.
 El cliente crea el objeto `Director` y el `ConcreteBuilder`. Antes de iniciar la construcción el cliente pasa el `ConcreteBuilder` al `Director` mediante el constructor del `Director`.
 
+## 8. Relación con otros patrones
+
+Este patrón se relaciona con otros patrones de diseño, como *Factory Method*, *Abstract Factory*, *Prototype* y *Bridge*.
+*Factory Method* es un patrón menos complicado que permite la creación de objetos con subclases y es un buen punto de partida para muchos diseños. Los diseños que usan este patrón se pueden implementar con patrones más complejos como *Abstract Factory*, *Prototype* o *Builder*.
+A diferencia de *Abstract Factory*, que se especializa en la creación de familias de objetos relacionados, el patrón *Builder* se enfoca en la construcción de objetos complejos paso a paso. *Builder* permite la ejecución de pasos de construcción adicionales antes de retornar el producto, mientras que *Abstract Factory* retorna el producto inmediatamente.
+Además, el patrón *Builder* se puede utilizar para crear árboles complejos del patrón *Composite*, ya que se pueden programar los pasos de construcción recursivamente.
+Otro patrón de diseño que se puede combinar con *Builder* es Bridge. En este caso, la clase Director actúa como abstracción mientras que los diferentes *builders* actúan como implementaciones.
+Finalmente, es importante destacar que los patrones de diseño *Abstract Factory*, *Builder* y *Prototype* pueden ser implementados como *Singletons*, lo que significa que solo hay una instancia de la clase en todo el programa. Esto puede mejorar el rendimiento y la eficiencia del código.
+
 ## Bibliografía
 
 Refactoring Guru. (s.f.). Builder. Recuperado el 14 de abril de 2023, de https://refactoring.guru/design-patterns/builder
