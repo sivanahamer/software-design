@@ -48,3 +48,20 @@ El patrón organiza la construcción de los objetos en un conjunto de pasos, com
 La interfaz `Builder` declara los pasos de construcción de los productos que son **comunes para todos los tipos de *builders***. Por ejemplo una clase `FormBuilder`. Los `ConcreteBuilder`, por su parte, implementan la interfaz `Builder` con diferentes pasos de construcción. Además pueden producir productos que no tienen una interfaz en común. Por ejemplo una clase `AdmissionFormBuilder`, que crea productos `AdmissionForm`. Los productos son los objetos resultantes. Productos construidos por diferentes *builders* no tienen que pertenecer a la misma jerarquía de clases o interfaces. Por ejemplo una clase `AdmissionForm` que puede ser creada por diferentes *builders*.
 
 Para separar una serie de pasos, se puede crear otra clase llamada `Director`, la cual define el órden en el que se ejecutan los pasos de construcción, mientras que la clase `Builder` implementa los pasos. Aunque no es necesario tener una clase `Director`, esta es útil para definir el orden en el que se llaman los pasos de construcción, y así poder crear y volver a usar configuraciones específicas de productos. Un ejemplo es la clase `FormDirector`, que permite escribir toda la información personal antes de la información de contacto y construir un formulario sin la información laboral, si así lo requiere.
+
+## 7. Sugerencias de implementación
+
+Refactoring Guru (s.f.) define las siguientes sugerencias:
+
+* Se debe definir de forma adecuada los pasos de construcción de todas las representaciones de productos disponibles.
+* Estos pasos deben estar declarados en la interfaz del *builder* (`Builder interface`)
+* Cree una clase constructora concreta (`ConcreteBuilder`) para cada una de las representaciones de los productos e implemente los pasos de construcción
+Se debe implementar un método para obtener el resultado de la construcción (`getResult()`) en cada clase `ConcreteBuilder`.
+* Aunque no es necesario, considere implementar la clase `Director`, puede ayudar a encapsular varias formas de construir un objeto `Product` utilizando el mismo objeto ConcreteBuilder.
+El cliente crea el objeto `Director` y el `ConcreteBuilder`. Antes de iniciar la construcción el cliente pasa el `ConcreteBuilder` al `Director` mediante el constructor del `Director`.
+
+## Bibliografía
+
+Refactoring Guru. (s.f.). Builder. Recuperado el 14 de abril de 2023, de https://refactoring.guru/design-patterns/builder
+
+Hunt, J. (2013). Scala Design Patterns (1a ed.). Springer Publishing. https://doi-org.ezproxy.sibdi.ucr.ac.cr/10.1007/978-3-319-02192-8
