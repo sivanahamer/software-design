@@ -318,6 +318,20 @@ FormDirector director = new FormDirector(builder)
 AdmissionForm form = builder.build();
 ```
 
+## 6. Consecuencias
+
+### Ventajas
+
+El patrón de diseño *Builder* tiene varias ventajas. En primer lugar, permite construir objetos paso a paso y diferir los pasos de construcción o ejecución recursivamente. En lugar de construir todo el objeto de una sola vez, se pueden construir diferentes partes o características del objeto de manera separada, a medida que se necesiten o se completen.
+
+Además, el código de construcción puede ser reutilizado para varias representaciones de los productos. En lugar de tener que escribir un nuevo código de construcción para cada representación del producto, se puede utilizar un constructor común que acepte diferentes parámetros para producir diferentes versiones del mismo producto. Esto no solo ahorra tiempo y esfuerzo al no tener que escribir código de construcción para cada versión del producto, sino que también ayuda a mantener un código más limpio y organizado al evitar la duplicación del código.
+
+Por último, se puede aplicar el *Single Responsibility Principle* al aislar el código complejo de construcción de la lógica de negocio del producto, lo que significa que cualquier cambio en la lógica de construcción no afectará la lógica de negocio del producto y viceversa. Además, al aislar la lógica de construcción compleja en un constructor específico, se puede proporcionar una interfaz simple y fácil de usar para los usuarios que necesitan crear objetos complejos. Esto significa que los usuarios no necesitan preocuparse por los detalles completos de la construcción del objeto, sino que pueden simplemente proporcionar los parámetros necesarios y dejar que el constructor se encargue del resto.
+
+### Desventjas
+
+Sin embargo, el patrón de diseño *Builder* también presenta algunas desventajas. En particular, la complejidad del código puede aumentar debido a que el patrón requiere la creación de nuevas clases. Se suelen crear varias clases para implementar la construcción paso a paso del objeto complejo, lo que puede aumentar la cantidad de código necesario y la complejidad de la estructura de clases. Además, el patrón puede requerir la implementación de interfaces adicionales para los diferentes componentes del objeto, lo que puede aumentar aún más la complejidad. Además, si el objeto que se está construyendo es simple y no requiere una construcción paso a paso, el uso del patrón de diseño *Builder* puede ser innecesario y puede aumentar la complejidad del código sin agregar un valor significativo. Por último, el patrón de diseño *Builder* puede ser menos eficiente que otros enfoques de construcción de objetos, ya que implica la creación de varios objetos adicionales y la llamada de múltiples métodos para construir el objeto final.
+
 ## 7. Sugerencias de implementación
 
 Refactoring Guru (s.f.) define las siguientes sugerencias:
