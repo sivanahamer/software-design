@@ -16,7 +16,7 @@
 
 (Sandra, A  y Perez, V, 2007, p.60)
 
-![Imagen Estructura básica](./../design/Diagrama%20general%20de%20clases%20-%20Bridge.png)
+![Imagen Estructura básica](./../img/Componentes.PNG)
 
 Para ver un ejemplo más concreto vea [problema](./Problema.md) y [solución](./Solucion.md)
 
