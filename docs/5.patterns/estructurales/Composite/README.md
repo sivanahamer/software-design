@@ -27,3 +27,28 @@ Uno de los ejemplos más claros de este patrón son los sistemas de almacenamien
 
 ![directorios](/images/directorios.jpg)
 **Figura 5: Estructura de carpetas y archivos**
+
+## Solución
+
+El patrón Composite utiliza y se basa en tres componentes principales para definir e implementar su estructura, que pueden ser observados en el diagrama UML de la **Figura 6**:
+
+![compositeUML](/images/diagrama_composite.png)
+**Figura 6: Diagrama UML del patrón Composite**
+
+### Component 🧰
+
+Esta clase declara la interfaz de la cual van a heredar los objetos en la composición, es decir, *Leaf* y *Composite*. Además, es el responsable de implementar el comportamiento predeterminado para la interfaz común a todas las clases, las cuales deben implementarlo según corresponda. Declara una interfaz para acceder y administrar sus componentes secundarios y de forma opcional, puede  definir también una interfaz para acceder al padre de un componente en la estructura recursiva y la implementa si es apropiado. (Haythornwaite, 2002, p. 165).
+
+### Composite 🛍️
+
+Esta clase hereda de *Component* y es donde se encuentra la mayor lógica del patrón ya que define el comportamiento de los componentes que tienen hijos, puede almacenar una cantidad indefinida de componentes secundarios que hereden de la clase *Component*, teniendo la posibilidad de almacenar objetos de su mismo tipo *Composite* formando una composición recursiva. Es común que esta clase implemente una estructura de datos para guardar estos objetos de la composición. Además, esta clase debe implementar las operaciones o subrutinas relacionadas a los hijos definidas en la interfaz *Component*. (Haythornwaite, 2002, p. 165).
+
+### Leaf 🍃
+
+Esta clase también hereda de *Component* y representa los objetos hoja en la composición, definiendo el comportamiento de estos objetos primitivos, los cuales heredan las subrutinas necesarias de *Component* e implementan su propia versión de estas en caso de que no puedan utilizar la ya definida por *Component*. Estos objetos pueden, y normalmente están contenidos en un objeto *Composite*, además un cliente puede llamar a sus métodos individualmente. Cabe destacar que al ser una clase hoja, representan la clase más baja de la jerarquía por lo que no pueden contener otras clases que hereden de esta. (Haythornwaite, 2002, p. 165).
+
+### Client 🧑‍💻
+
+Más que una clase es un cliente que manipula los objetos de la composición a través de la interfaz *Component*. Si hace el llamado a un componente Leaf, este realizará la acción individualmente, pero si lo hace con un *Composite*, este hará el llamado recursivo a todos los objetos que formen parte de esa composición.
+
+Lo anterior se puede ejemplificar con un sistema de archivos y directorios, en el que si por ejemplo, un usuario elimina un archivo (representando un objeto *Leaf*), este se eliminará individualmente, pero si elimina una carpeta (representando un objeto *Composite*) entonces esta llamará a eliminar recursivamente todos los archivos y subcarpetas dentro de ella.
