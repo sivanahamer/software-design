@@ -9,3 +9,5 @@ Gamma, E. et all (1994). Design Patterns: Elements of Reusable Object-Oriented S
 Refactoring.guru. (s.f.)  Bridge. https://refactoring.guru/es/design-patterns/bridge
 
 W3sdesign (s.f) Bridge. http://w3sdesign.com/?gr=s02&ugr=struct#gf
+
+[Regresar al Readme](./../README.md)
