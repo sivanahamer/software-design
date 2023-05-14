@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\docs",
+    "\\docs\\5.patterns",
+    "\\docs\\5.patterns\\estructurales",
+    "\\docs\\5.patterns\\estructurales\\Flyweight"
   ],
-  "SelectedNode": "\\C:\\Users\\XPC\\Source\\Repos\\software-design",
+  "SelectedNode": "\\docs\\5.patterns\\estructurales\\Flyweight\\Readme.md",
   "PreviewInSolutionExplorer": false
 }
