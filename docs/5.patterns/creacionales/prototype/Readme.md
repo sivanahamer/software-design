@@ -91,3 +91,17 @@ Las principales ventajas del patrón prototipo son las siguientes:
 - Le permite agregar o eliminar objetos en tiempo de ejecución.
 
 ## Referencias:
+
+Design Patterns - Prototype Pattern. (n.d.). https://www.tutorialspoint.com/design_pattern/prototype_pattern.htm
+
+GeeksforGeeks. (2022). Prototype Design Pattern. GeeksforGeeks. https://www.geeksforgeeks.org/prototype-design-pattern/
+
+Pankaj. (2022). Prototype Design Pattern in Java. DigitalOcean. https://www.digitalocean.com/community/tutorials/prototype-design-pattern-in-java
+
+Prototype Design Pattern - Javatpoint. (n.d.). www.javatpoint.com. https://www.javatpoint.com/prototype-design-pattern
+
+Prototype Pattern. (n.d.-a). https://www.patterns.dev/posts/prototype-pattern
+
+Refactoring.Guru. (2023). Prototype. Refactoring.Guru. https://refactoring.guru/design-patterns/prototype
+
+The GoF Design Patterns Memory - Learning Object-Oriented Design & Programming. (2017). w3sDesign. http://w3sdesign.com/?gr=c04&ugr=proble
