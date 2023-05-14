@@ -127,3 +127,9 @@ Usualmente es implementado con factory methods.
 
 Como se mencionó anteriormente, es común encontrar factory methods dentro de un template.
 
+### Bibliografía
+
+Gamma, Erich et.al. “Design Patterns”. Addison-Wesley, 1995. 
+
+Refactoring.Guru. (2023). Factory Method. Refactoring.Guru. https://refactoring.guru/design-patterns/factory-method
+
