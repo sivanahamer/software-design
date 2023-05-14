@@ -41,6 +41,8 @@ Supongamos que tenemos un objeto que carga datos de la base de datos. Ahora tene
 Una copia superficial crea un nuevo objeto que comparte algunos o todos los datos con el objeto original, mientras que una copia profunda crea un nuevo objeto con datos completamente nuevos que no se comparten con el objeto original. Esto significa que el nuevo objeto y el objeto original tienen referencias separadas a los objetos referenciados, de modo que si uno modifica el objeto, el otro no se verá afectado.
 La elección entre una copia superficial o profunda depende de las necesidades específicas de su aplicación.
 
+[Código final](Prototype.java)
+
 ## Consecuencias: 
 ### Pros
 - Puede clonar objetos sin acoplarlos a sus clases concretas.
