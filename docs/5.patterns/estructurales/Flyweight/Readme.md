@@ -1,9 +1,16 @@
 # Patrón Flyweight
 
+* Luis Diego Barrantes B70994
+* Francisco Mora Díaz C05118
+
 Presentación PDF: [Flyweight Pattern](./flyweight_pattern.pdf)
 
 ## Problema
 En la creación de aplicaciones de software, el manejo eficiente de memoria es una de las principales metas, lograrla se vuelve un desafío cuando se lidia con un gran número de objetos. Sin una estrategia efectiva que contemple los atributos contextuales de cada objeto, la creación y manipulación de estos puede conducir a saturación de memoria, un rendimiento lento y caídas de sistema.
+
+![Smooth](./images/smooth.gif)
+
+![Laggy](./images/laggy.gif)
 ## Solución
 ## Estados
 ## Flyweight
