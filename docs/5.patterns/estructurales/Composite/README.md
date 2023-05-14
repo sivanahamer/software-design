@@ -63,7 +63,7 @@ Lo anterior se puede ejemplificar con un sistema de archivos y directorios, en e
 
 ## Ejemplo de código
 
-Para comprender mejor la implementación y funcionalidad del patrón, puede observar el código de ejemplo que se encuentra en la carpeta [src](/src/) , que contiene el ejemplo de secciones y carpetas de la plataforma Mediación Virtual.
+Para comprender mejor la implementación y funcionalidad del patrón, puede observar el código de ejemplo que se encuentra en la carpeta: [src](./src/), que contiene el ejemplo de secciones y carpetas de la plataforma Mediación Virtual.
 Además puede observar el siguiente ejemplo correspondiente al main del código: [Ejemplo de Código](./src/Main.java)
 
 ***
@@ -140,4 +140,4 @@ Composite design pattern (2021) GeeksforGeeks. [https://www.geeksforgeeks.org/co
 
 ## Anexo 1
 
-Si desea ver la presentación del patrón, vea: [Presentación Patrón Composite](/ppt/Patr%C3%B3n%20Composite.pdf)
+Si desea ver la presentación del patrón, presione: [Presentación Patrón Composite](./ppt/compositePPT.pdf)
