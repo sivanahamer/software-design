@@ -12,8 +12,18 @@ En la creación de aplicaciones de software, el manejo eficiente de memoria es u
 
 ![Laggy](./images/laggy.gif)
 ## Solución
+El patrón Flyweight es un patrón de diseño que se utiliza para optimizar el uso de memoria en aplicaciones con un gran número de objetos similares. Su objetivo principal es reducir la redundancia y minimizar el consumo de memoria almacenando datos compartidos entre múltiples objetos en un objeto compartido centralizado llamado "flyweight". El patrón flyweight es un patrón estructural, lo que significa que busca una forma de restructurar la información que ya está presente en vez de agregar nueva información. Lo qué se hace en Flyweight es buscar los atributos cada familia de objetos y organizarlos en 2 estados.
+
 ## Estados
+![States_flyweight](./images/States_flyweight.png)
+**Estados en el patrón Flyweight**
+
+El estado intrínseco son los atributos comunes qué se comparten entre los objetos de una misma familia y el estado extrínseco son los atributos que son propios de cada instancia de un objeto ya que dependen de su contexto específico.
+
 ## Flyweight
+
+La clase Flyweight es donde se almacena el estado intrínseco de una familia de objetos y este es independiente al contexto. Solo es necesario crear una instancia de la clase flyweight por cada familia de objetos qué se utilicen los mismos datos intrínsecos.
+
 ## Estructura
 ![Flyweight_structure](./images/Flyweight_structure.png)
 **Estructura del patrón flyweight**
@@ -66,8 +76,21 @@ En este ejemplo se descompone el objeto **“Árbol”** en estados intrínseco 
 
 
 ## Flyweight en la UCR
+
+![UCR](./images/Flyweight_Ucr.gif)
+
+Flyweight se puede aplicar dentro de la arquitectura de la universidad para aliviar la carga de memoria qué se utiliza en mediación virtual a la hora de trabajar con las instancias de los cursos disponibles en la plataforma. Es posible abstraer la información común de entre cada curso en un objeto flýweight y utilizar este para referenciar las instancias reducidas de cada curso. También, se puede utilizar para reducir la carga computacional de proyectos de investigación dentro de la universidad.
+
+
 ## Consecuencias
+
+Utilizar el patrón flyweight tiene ciertas ventajas asociadas: ahorro de memoria, mejoras en el rendimiento y la creación de menos objetos a la hora de ejecutar código. Por otro lado, aplicar este patrón puede traer ciertas desventajas: El código se complica debido a la separación de atributos y el manejo de punteros por las referencias y el intercambio de uso de CPU a cambio de la RAM.
+
 ## Patrones relacionados
+* Factory method 
+* Facade 
+* Composite
+
 ## Referencias
 
 * Refactoring.Guru. (2023). Flyweight. Refactoring.Guru. https://refactoring.guru/design-patterns/flyweight
