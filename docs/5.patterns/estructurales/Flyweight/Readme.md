@@ -12,6 +12,7 @@ En la creación de aplicaciones de software, el manejo eficiente de memoria es u
 
 ![Laggy](./images/laggy.gif)
 ## Solución
+El patrón flyweight es un patrón estructural, lo que significa que busca una forma de restructurar la información que ya está presente en vez de agregar nueva información. Esto es crucial ya que el objetivo de este patrón es disminuir la carga de un programa sobre la memoria ram de una computadora.
 ## Estados
 ## Flyweight
 ## Estructura
