@@ -33,6 +33,8 @@ Uno de los ejemplos más claros de este patrón son los sistemas de almacenamien
 
 **Figura 5: Estructura de carpetas y archivos**
 
+Nota: Adaptador de Definición de Directorio [Fotografía], por Alegsa.com.ar (2018). Alegsa ([https://www.alegsa.com.ar/Dic/directorio.php](https://www.alegsa.com.ar/Dic/directorio.php)). ALEGSA © 2018-05-17
+
 ## Solución
 
 El patrón Composite utiliza y se basa en tres componentes principales para definir e implementar su estructura, que pueden ser observados en el diagrama UML de la **Figura 6**:
@@ -63,7 +65,7 @@ Lo anterior se puede ejemplificar con un sistema de archivos y directorios, en e
 
 ## Ejemplo de código
 
-Para comprender mejor la implementación y funcionalidad del patrón, puede observar el código de ejemplo que se encuentra en la carpeta: [src](./src/), que contiene el ejemplo de secciones y carpetas de la plataforma Mediación Virtual.
+Para comprender mejor la implementación y funcionalidad del patrón, puede observar el código de ejemplo que se encuentra en la carpeta src, que contiene el ejemplo de secciones y carpetas de la plataforma Mediación Virtual.
 Además puede observar el siguiente ejemplo correspondiente al main del código: [Ejemplo de Código](./src/Main.java)
 
 ***
@@ -137,6 +139,8 @@ Project Management Institute, Inc (ed.) The composite pattern. [https://www.pmi.
 Design patterns - composite pattern Tutorials Point. [https://www.tutorialspoint.com/design_pattern/composite_pattern.htm](https://www.tutorialspoint.com/design_pattern/composite_pattern.htm)
 
 Composite design pattern (2021) GeeksforGeeks. [https://www.geeksforgeeks.org/composite-design-pattern/](https://www.geeksforgeeks.org/composite-design-pattern/)
+
+Alegsa.com.ar (2018). Definición de Directorio [Fotografía]. Alegsa. [https://www.alegsa.com.ar/Dic/directorio.php](https://www.alegsa.com.ar/Dic/directorio.php)
 
 ## Anexo 1
 
