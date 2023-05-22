@@ -26,7 +26,7 @@ La clase Flyweight es donde se almacena el estado intrínseco de una familia de 
 
 ## Estructura
 ![Flyweight_structure](./images/Flyweight_structure.png)
-**Estructura del patrón flyweight**
+**Estructura del patrón flyweight (Diagrama de refactoring.guru: https://refactoring.guru/images/patterns/diagrams/flyweight/structure.png?id=c1e7e1748f957a4792822f902bc1d420)**
 
 1.  **Flyweight:** Contiene estado intrínseco que puede ser compartido entre múltiples objetos. Puede ser utilizado en diferentes contextos.  Usualmente contempla el comportamiento del objeto original (no dividido en estados), este recibe en sus parámetros el estado extrínseco.
  
