@@ -15,7 +15,6 @@
 7. [Implementación](./content/Implementacion.md)
 8. [Relación con otros patrones](./content/Patrones_Relacionados.md)
 9. [Referencias](./content/Referencias.md)
-10. [Coevaluaciones](./autoevaluacion_y_coevaluacion/)
 
 Para ver un resumen de los contenidos diríjase a la siguiente [presentación](./presentation/Bridge%20-%20Presentaci%C3%B3n.pdf)
 ## About
