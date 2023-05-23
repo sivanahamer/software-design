@@ -96,10 +96,12 @@ Supongamos que se quiere crear un juego llamado Maze Game. Este tiene varios ele
 ### Creador y productos
 
 ![Ejemplo de Creador y productos](./images/creator_products.png)
+Smith, J. Creator Products del patrón de Factory Method [Captura de pantalla]. En: Gamma, E., Helm, R., Johnson, R., & Vlissides, J. (1995). Design Patterns: Elements of Reusable Object-Oriented Software. Addison-Wesley.
 
 ### Creador concreto y productos concretos
 
 ![Ejemplo de Creador concreto y productos concretos](./images/concrete_creator_products.png)
+Smith, J. Concrete Creator y Concrete Products del patrón de Factory Method [Captura de pantalla]. En: Gamma, E., Helm, R., Johnson, R., & Vlissides, J. (1995). Design Patterns: Elements of Reusable Object-Oriented Software. Addison-Wesley.
 
 ## Consecuencias
 
@@ -114,6 +116,7 @@ El uso de factory methods eliminan la necesidad de definir un método de creaci�
 Otra consecuencia buena es que los factory methods conectan jerarquías de clases paralelas. Las clases paralelas son clases cuya lógica y jerarquía es muy similar. Por ejemplo:
 
 ![Ejemplo de Creador concreto y productos concretos](./images/jerarquia_de_clases_paralelas.png)
+Smith, J. Jerarquía de clases del patrón de Factory Method [Captura de pantalla]. En: Gamma, E., Helm, R., Johnson, R., & Vlissides, J. (1995). Design Patterns: Elements of Reusable Object-Oriented Software. Addison-Wesley.
 
 Como se puede observar, ambas jerarquías son lógicamente similares, en tanto que ambas se refieren a las figuras. Pero la jerarquía de la derecha es de manipuladores de esas figuras. Ahora bien, el factory method CreateManipulator define la conexión entre las dos jerarquías de clases. Establece qué clases pertenecen juntas.
 
