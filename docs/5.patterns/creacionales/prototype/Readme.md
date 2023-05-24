@@ -7,6 +7,8 @@ Uno de los mejores analogías que explican el patrón creacional de prototype es
 
 ![Proceso de mitosis](img/celulas.png)
 
+*[Ref refactoring.guru](https://refactoring.guru/design-patterns/prototype)*
+
 ## Problema: 
 
 Describir en qué escenario o contexto en específico en donde tiene sentido utilizar este patrón, con ejemplo
@@ -36,6 +38,8 @@ Participantes en el diseño de prototipos
 3) Cliente : El cliente será responsable de utilizar el servicio de registro para acceder a las instancias del prototipo.
 
 ![Participantes](img/participantes.png)
+
+*Ref: https://www.geeksforgeeks.org/prototype-design-pattern/*
 
 Supongamos que tenemos un objeto que carga datos de la base de datos. Ahora tenemos que modificar estos datos en nuestro programa varias veces, por lo que no es una buena idea crear el objeto utilizando la palabra clave new y cargar todos los datos de nuevo desde la base de datos. El mejor enfoque sería clonar el objeto existente en un nuevo objeto y luego hacer la manipulación de los datos. El patrón de diseño de prototipos exige que el objeto que se está copiando proporcione la función de copia. No debe ser realizada por ninguna otra clase. Sin embargo, el uso de la copia superficial o profunda de las propiedades del objeto depende de los requisitos y es una decisión de diseño. 
 Una copia superficial crea un nuevo objeto que comparte algunos o todos los datos con el objeto original, mientras que una copia profunda crea un nuevo objeto con datos completamente nuevos que no se comparten con el objeto original. Esto significa que el nuevo objeto y el objeto original tienen referencias separadas a los objetos referenciados, de modo que si uno modifica el objeto, el otro no se verá afectado.
