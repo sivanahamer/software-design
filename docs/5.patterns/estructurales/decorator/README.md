@@ -11,8 +11,10 @@ A la hora de diseñar un programa o un sistema de software se puede llegar al pu
 A continuación, se presentan 2 ejemplos para explicar bien una situación clara de un problema:
 
 ![example image](img/Imagen1.png)
+Imagen 1 (Shvets, Alexander, 2021)
 
 ![example image](img/Imagen2.png)
+Imagen 2 (Shvets, Alexander, 2021)
 
 ## Solución
 
@@ -32,6 +34,7 @@ Los componentes del patrón son:
 4. Decorator concreto: Son los decoradores concretos que heredan de la clase Decorator y agregan las características o funcionalidades.
 
 ![example image](img/Imagen3.png)
+Imagen 3 (Dofactory, s.f.)
 
 ## Ejemplo en código
 
@@ -169,3 +172,11 @@ Relación con otros patrones
 
 En el siguiente diagrama de clases se logra ver como seria implementar el patrón decorator en mediación virtual para agregar o quitarle funcionalidades a las tareas.
 ![image info](img/EjemploMediacionVIrtual.png)
+
+Imagen 4 (Esteban Rojas, 2023)
+
+## Referencias
+
+Shvets, Alexander. (2021) Decorator. https://refactoring.guru/es/design-patterns/decorator
+
+C# Decorator Design Pattern - Dofactory. (s. f.). https://www.dofactory.com/net/decorator-design-pattern
