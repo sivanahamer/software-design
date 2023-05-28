@@ -191,6 +191,18 @@ class CourseSystemFacade {
 
 Esta clase Facade funciona teniendo un estudiante, el cual simula ser el código cliente también que usa el sub sistema, es entonces donde cualquier función de los 3 servicios ya no se hace llamando a los servicios directamente, sino que se llama al Facade y la función que cumpla la misma funcionalidad que la que se tenía antes, y muchas más funciones, gracias a lo fácil que es ahora añadir funciones sin temor al **acoplamiento entre el código cliente y el sub sistema**
 
+# Consecuencias
+El uso del patrón tiene varias consecuencias positivas. En primer lugar, logra simplificar un sub-sistema, lo que facilita su comprensión y mantenimiento. Además, permite desacoplar el código, lo que significa que los componentes del sistema pueden funcionar de manera independiente, lo que facilita las modificaciones y mejoras. Otro beneficio es que el código se puede escalar, lo que significa que puede adaptarse a sistemas más grandes sin dificultad. Por último, el patrón permite la implementación de capas en un sistema, lo que proporciona una estructura organizada y modular.
+
+Sin embargo, también existen algunas consecuencias negativas asociadas con su uso. En primer lugar, hay una limitación en las funciones que se pueden realizar utilizando este patrón. Esto significa que puede haber restricciones en la implementación de ciertas funcionalidades más complejas. Además, si se utiliza incorrectamente, puede generar un alto acoplamiento dentro del sistema, lo que dificulta la modificación y el mantenimiento. Existe también la posibilidad de que se abran brechas para malas prácticas de programación. Por último, el uso excesivo del patrón puede resultar en una excesiva indirección de funciones, lo que puede afectar la eficiencia y el rendimiento del sistema.
+
+# Implementación
+Existen algunas sugerencias a tener en cuenta. En primer lugar, es importante proporcionar cohesión en el sistema para mejorar la implementación de un Facade. Esto implica asegurarse de que los componentes estén interconectados de manera efectiva y que el Facade pueda actuar como una interfaz unificada para acceder a ellos.
+
+Además, es fundamental mantener la simplicidad en el diseño del Facade. Evitar sobrecargarlo con métodos adicionales que podrían generar un mayor acoplamiento entre los componentes. En lugar de ello, es recomendable que el Facade se centre en las funcionalidades principales y esenciales, evitando la inclusión de métodos que puedan generar dependencias innecesarias.
+
+Es importante tener en cuenta que el rendimiento del sistema puede verse afectado cuando se requiere el uso de varias clases intermedias para realizar determinadas acciones a través del Facade. Esto puede generar una mayor complejidad y consumo de recursos. Especialmente cuando se trata de la implementación de capas de Facades, es necesario evaluar cuidadosamente la necesidad y el impacto que esto pueda tener en el rendimiento general del sistema.
+
 # Relación con los principios SOLID
 El patrón Facade se relaciona con el principio de responsabilidad única, ya que permite que cada sub-sistema complejo tenga una única responsabilidad y se encargue de realizar sus tareas específicas. Además, se relaciona con el principio de abierto/cerrado, ya que permite que el código cliente no se vea afectado por los cambios en el sub-sistema, ya que el Facade se encarga de realizar las modificaciones necesarias. Por último, se relaciona con el principio de sustitución de Liskov, ya que el Facade permite que el código cliente pueda utilizar los sub-sistemas de forma transparente, sin importar el sub-sistema que se esté utilizando.
 
