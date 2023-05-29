@@ -63,5 +63,10 @@ Por ejemplo, en una aplicación de edición de imágenes le asignaríamos a cada
 
 # Relación con otros patrones
 
+* Cadena de responsabilidad: Pasa una solicitud secuencialmente a lo largo de una cadena dinámica de receptores potenciales hasta que uno de ellos la maneja.
+* Observer: Permite a los receptores *Receivers* suscribirse y darse de baja dinámicamente de las solicitudes de recepción.
+* Memento: Se puede usar con Command para implementar undo. Los Commands realizan varias operaciones sobre un objeto destino y los Memento guardan el estado de ese objeto.
+* Prototype: Puede ayudar cuando necesite guardar copias de Comandos en el historial
+
 # Referencias
 
