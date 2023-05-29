@@ -57,7 +57,15 @@ Por ejemplo, en una aplicación de edición de imágenes le asignaríamos a cada
 
 ## Ventajas
 
+* Facilita la implementación de operaciones deshacer/rehacer.
+* Promueve la extensibilidad y la flexibilidad del código.
+* Puede implementar la ejecución diferida de operaciones (colas y registros de comandos).
+
 ## Desventajas
+
+* El código puede volverse más complicado ya que está introduciendo una capa completamente nueva entre remitentes y receptores.
+
+[Agregar imagen desventaja]
 
 # Principios de diseño
 
