@@ -106,20 +106,28 @@ generar una sobrecarga en el código
 En el problema de la vida real tenemos la comlicacion de un archivo en formato XML cuando lo ocupamos en JSON.
 
 ### XML a JSON
-![XML no compatible](./img/XML1.png)
+![XML no compatible, imagen extraida de https://refactoring.guru/design-patterns/adapter](./img/XML1.png)
 
 Asi que para poder solucionar este problema haremos uso de un adaptador, esto hara que el formato del archivo sea compatible con la biblioteca de análisis de datos.
 
 ### XML CON ADAPTER
-![XML compatible gracias al adapter](./img/XML2.png)
+![XML compatible gracias al adapter, imagen extraida de https://refactoring.guru/design-patterns/adapter](./img/XML2.png)
 
 
 
 ## Diagramas
 
-![Diagrama de clases adapter](./img/diagramaDeClasesAdapter.png)
+![Diagrama de clases adapter, imagen extraida de https://refactoring.guru/design-patterns/adapter](./img/diagramaDeClasesAdapter.png)
 
 En el diagrama de clases podemos ver un diagrama simple que muestro como es que sirve una implementación sencilla de adapter basada en el caso anteriormente mencionado de XML a JSON.
+
+
+## Patrones relacionados
+
+* Bridge
+* Decorator
+* Composite
+* Facade
 
 ## Referencias
 
