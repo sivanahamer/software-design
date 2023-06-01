@@ -5,6 +5,9 @@
 - Daniel Lizano Morales C04285
 - Esteban Rodrigo Castañeda Blanco C01795
 
+## Tipo de patrón
+Los patrones estructurales explican el cómo ensamblar objetos y clases en estructuras más grandes, manteniendo la flexibilidad y eficiencia. Buscan resolver los problemas que requieren la composición de objetos
+
 ## Concepto y propósito
 
 Patrón que convierte la interfaz de una clase a
