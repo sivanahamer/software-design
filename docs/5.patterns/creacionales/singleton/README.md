@@ -149,10 +149,65 @@ public static void main(String[] args) {
 ## Consecuencias
 
 ### Positivas 
-1. 
-1. 
+1. Control de acceso concurrente
+1. Un objeto singleton se instancia una única vez
+1. Objeto disponible en un estado controlado
+1. Puede implementar interfaces
+1. Fácil de implementar
+
 ### Negativas
+1. Resuelve dos problemas a la vez. No sigue el Single Responsibility Principle
+1. Su estado siempre activo complica unit testing
 
 ## Implementación
+
+Conexión singleton a una base de datos en java
+
+```java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class MySQLDatabaseConnection {
+    private static MySQLDatabaseConnection instance;
+    private Connection connection;
+    
+    private final String url = "jdbc:mysql://localhost:3306/mydatabase";
+    private final String username = "your-username";
+    private final String password = "your-password";
+    
+    private MySQLDatabaseConnection() {
+        // Constructor privado
+    }
+    
+    public static MySQLDatabaseConnection getInstance() {
+        if (instance == null) {
+            instance = new MySQLDatabaseConnection();
+        }
+        return instance;
+    }
+    
+    public Connection getConnection() {
+        if (connection == null) {
+            try {
+                connection = DriverManager.getConnection(url, username, password);
+                System.out.println("Conexión a la base de datos establecida.");
+            } catch (SQLException e) {
+                System.out.println("Error al establecer la conexión: " + e.getMessage());
+            }
+        }
+        return connection;
+    }
+}
+
+```
+
 ## Relación con otros patrones
+
+1. Builder
+1. Factory Method
+1. Adapter
+1. Decorator
+1. Proxy
+1. Observer
 
