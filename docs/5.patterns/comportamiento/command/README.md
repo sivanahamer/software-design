@@ -45,11 +45,11 @@ Además pensemos en que la comida que nos trajeron no fue lo que pedimos, podrí
 
 Por ejemplo, en una aplicación de edición de imágenes le asignaríamos a cada botón un comando específico en el momento de su creación. Pero también podríamos cambiarle este comando por uno más especializado.
 
-![Applicability 1](./img/command_applicability_1)
+![Applicability 1](./img/command_applicability_1.png)
 
 * Utilice el patrón Command cuando desee poner en cola operaciones, programar su ejecución o ejecutarlas de forma remota. Por ejemplo, si en el sistema de Correo UCR quisieramos dar la oportunidad a los usuarios de programar el envío de correos cada cierto tiempo, o que la papelera se vacíe pasados unos días, ...., podríamos poner nuestroa comandos en una cola de espera y se ejecuten después de un tiempo. Para esto se requiere conocer el paradigma de programación orientado a eventos.
 
-![Applicability 1](./img/command_applicability_2)
+![Applicability 2](./img/command_applicability_2.png)
 
 * Utilice el patrón Command cuando desee implementar operaciones reversibles.
 
@@ -65,7 +65,7 @@ Por ejemplo, en una aplicación de edición de imágenes le asignaríamos a cada
 
 * El código puede volverse más complicado ya que está introduciendo una capa completamente nueva entre remitentes y receptores.
 
-![Applicability 1](./img/command_disadvantage_1)
+![Disadvantage 1](./img/command_disadvantage_1.png)
 
 ## 8. Principios de diseño
 
@@ -75,13 +75,13 @@ Por ejemplo, en una aplicación de edición de imágenes le asignaríamos a cada
 
 Cada comando tiene la responsabilidad de encapsular una operación específica y ejecutarla cuando sea necesario. Podría incumplirse si un comando también se encarga de realizar operaciones adicionales, como el registro de eventos, la notificación de otros objetos o la gestión del estado.
 
-![Applicability 1](./img/command_solid_1)
+![SOLID 1](./img/command_solid_1.png)
 
 * Principio de Open/Closed (OCP)
 
 Cumple con este principio al permitir la extensibilidad del código sin modificar el código existente. Se pueden agregar nuevos comandos sin alterar los objetos invocadores o los objetos receptores existentes. No se estaría cumpliendo si se debe estar modificando el objeto invocador o también la interfaz ICommand cada vez que se agreguen nuevos comandos.
 
-![Applicability 1](./img/command_solid_2)
+![SOLID 2](./img/command_solid_2.png)
 
 * Principio de segregación de interfaces:
 
@@ -91,7 +91,7 @@ Cumple con este principio al definir una interfaz específica para los comandos.
 
 Cumple con este principio al permitir que los objetos invocadores no dependan directamente de los objetos receptores o de los comandos concretos. Los objetos invocadores solo conocen la interfaz común del comando.
 
-![Applicability 1](./img/command_solid_3)
+![SOLID 3](./img/command_solid_3.png)
 
 ### 8.2 DRY (Don't repeat yourself)
 
