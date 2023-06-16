@@ -9,6 +9,6 @@
 (Shvets, A, 2019, p.386-387)
 
 
-![Imagen Estructura básica](./../img/Estructura_Template_Method.PNG)
+![Imagen Estructura básica](./../img/Estructura_Template_Method.png)
 
 [Regresar al Readme](./../README.md)
