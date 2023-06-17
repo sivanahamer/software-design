@@ -11,6 +11,7 @@
   - [Tabla de Contenidos](#tabla-de-contenidos)
   - [Problema](#problema)
   - [Solución](#solución)
+  - [Ejemplo de código](#ejemplo-de-código)
 
 ***
 
@@ -58,6 +59,14 @@ El Caretaker es el componente encargado de almacenar los *snapshots*, es decir, 
 
 **Interacción entre los componentes**
 En el patrón Memento, los componentes interactúan de la siguiente manera: el cliente por medio de la interfaz Caretaker solicita al Originator guardar su estado actual, por lo que el Originator crea un nuevo objeto Memento y se lo devuelve al Caretaker para que lo almacene. Cuando el cliente solicita volver a un estado anterior, el Caretaker proporciona al Originator el estado deseado que está almacenado en el Memento. El Originator toma el *snapshot* del estado y lo aplica, volviendo al estado previo. Esto permite ocultar la implementación y los datos del Memento y del Originator a clases externas.
+
+[Volver al índice](#tabla-de-contenidos)
+***
+
+## Ejemplo de código
+
+Si desea comprender con mayor profundad el funcionamiento del patrón Memento y cómo implementarlo en un sistema, puede observar el código de ejemplo que se encuentra en la carpeta "src", la cuál contiene un ejemplo de guardado de estados del Correo Institucional de la Universidad de Costa Rica utilizando el patrón Memento.
+Puede visitar el main del este código en este [link](./src/Main.java).
 
 [Volver al índice](#tabla-de-contenidos)
 ***
