@@ -15,6 +15,7 @@ Digamos que se tiene un restaurante donde se sirven bebidas calientes, para prep
 
 ![Ejemplo_Bebidas_Calientes_Solas](./../img/Clases_Bebidas_Calientes.png)
 
+A continuación puede visualizar la [solución](./Solucion.md/#solución-para-problema-de-las-bebidas-calientes) al problema descrito
 
 ### **Problema dentro de un contexto de la UCR**
 
@@ -24,6 +25,6 @@ En este sentido, se obtendrá el siguiente resultado, en donde se define un curs
 
 ![Ejemplo_UCR_Sin_Bridge](./../img/Clases_Cursos_UCR.PNG)
 
-A continuación se puede visualizar la [solución](./Solucion.md) para los problemas descritos
+A continuación puede visualizar la [solución](./Solucion.md/#solución-para-problema-de-la-ucr) al problema descrito
 
 [Regresar al Readme](./../README.md)
