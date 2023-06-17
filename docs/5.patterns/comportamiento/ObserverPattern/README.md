@@ -48,7 +48,7 @@ Este ejemplo será el implementado en código, se desea implementar una funciona
 
 El anterior ejemplo se desea implementar para que se parezca a una funcionalidad ya implementada en mediación virtual, la cuál es la notificación de todos los estudiantes cuando un profesor realiza retroalimentación de una tarea. Aunque los programadores de mediación virtual lo más probable es que no hayan utilizado este patrón de diseño para implementar esa funcionalidad, lo cierto es que nos sirve de ejemplo para saber como funciona el patrón Observer de forma general. A continuacion se mostrará una imagen de la notificación de la revisión de una tarea en mediación virtual.
 
-![Imagen del correo](./img/imagendemediacion.png)
+![Imagen del correo](./img/Imagendemediacion.png)
 
 |Imagen 1. Imagen de cuando un profesor revisa una tarea y este notifica al los estudiantes del curso|
 | :----------: |
