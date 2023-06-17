@@ -77,6 +77,194 @@ El cliente es responsable de crear un objeto concreto Command y proporcionar el 
 
 ## 5. Ejemplo en código
 
+### Diagrama
+
+![Example](./img/command_example.png)
+
+### C++
+
+#### Clase Invoker
+
+```cpp
+class Enrollment {
+ private:
+  std::stack<EnrollmentCommand*> undo_stack;
+  std::stack<EnrollmentCommand*> redo_stack;
+
+ public:
+  void executeCommand(EnrollmentCommand* command) {
+    command->execute();
+    this->undo_stack.push(command);
+  }
+
+  void undo() {
+    if (!this->undo_stack.empty()) {
+      auto* command = this->undo_stack.top();
+      command->undo();
+      this->undo_stack.pop();
+      this->redo_stack.push(command);
+    }
+  }
+
+  void redo() {
+    if (!this->redo_stack.empty()) {
+      auto* command = this->redo_stack.top();
+      command->execute();
+      this->redo_stack.pop();
+      this->undo_stack.push(command);
+    }
+  }
+};
+```
+
+#### Interfaz Command
+
+```cpp
+class EnrollmentCommand {
+ public:
+  virtual void execute() = 0;
+  virtual void undo() = 0;
+};
+```
+
+#### Clases Concretas Command
+
+```cpp
+class AddCourseCommand : public EnrollmentCommand {
+ private:
+  Student& student;
+  Course& course;
+
+ public:
+  AddCourseCommand(Student& student, Course& course) : student(student), course(course) {}
+
+  void execute() override {
+    this->student.getCourses().push_back(this->course);
+  }
+
+  void undo() override {
+    auto& courses = this->student.getCourses();
+
+    for (auto iterator = courses.begin(); iterator != courses.end(); ++iterator) {
+      auto course = *iterator;
+
+      if (this->course.getName() == course.getName()) {
+        this->student.getCourses().erase(iterator);
+        break;
+      }
+    }
+  }
+};
+
+class RemoveCourseCommand : public EnrollmentCommand {
+ private:
+  Student& student;
+  Course& course;
+
+ public:
+  RemoveCourseCommand(Student& student, Course& course) : student(student), course(course) {}
+
+  void execute() override {
+    auto& courses = this->student.getCourses();
+
+    for (auto iterator = courses.begin(); iterator != courses.end(); ++iterator) {
+      auto course = *iterator;
+
+      if (this->course.getName() == course.getName()) {
+        this->student.getCourses().erase(iterator);
+        break;
+      }
+    }
+  }
+
+  void undo() override {
+    this->student.getCourses().push_back(this->course);
+  }
+};
+
+
+class UndoCommand : public EnrollmentCommand {
+ private:
+  Enrollment& enrollment;
+
+ public:
+  UndoCommand(Enrollment& enrollment) : enrollment(enrollment) {}
+
+  void execute() override {
+    this->enrollment.undo();
+  }
+
+  void undo() override {}
+};
+
+
+class RedoCommand : public EnrollmentCommand {
+ private:
+  Enrollment& enrollment;
+
+ public:
+  RedoCommand(Enrollment& enrollment) : enrollment(enrollment) {}
+
+  void execute() override {
+    this->enrollment.redo();
+  }
+
+  void undo() override {}
+};
+```
+#### Clase Receiver
+
+```cpp
+class Student {
+ private:
+  std::string name;
+  std::vector<Course> courses;
+
+ public:
+  Student(const std::string& name) : name(name) {}
+
+  const std::string& getName() const {
+    return this->name;
+  }
+
+  std::vector<Course>& getCourses() {
+    return this->courses;
+  }
+};
+
+class Course {
+ private:
+  std::string name;
+
+ public:
+  Course(const std::string& name) : name(name) {}
+
+  const std::string& getName() const {
+    return this->name;
+  }
+};
+```
+
+#### Client
+
+```cpp
+int main() {
+  Student student("Martin Fowler");
+
+  Course english_course("English");
+  Course spanish_course("Spanish");
+
+  Enrollment enrollment;
+
+  enrollment.executeCommand(new AddCourseCommand(student, english_course));
+  enrollment.executeCommand(new AddCourseCommand(student, spanish_course));
+
+  enrollment.executeCommand(new UndoCommand(enrollment));
+
+  enrollment.executeCommand(new RedoCommand(enrollment));
+}
+```
+
 ## 6. Implementación
 
 ### 6.1 Pasos de implementación
