@@ -5,12 +5,12 @@ Para generar una solución más óptima al [problema de las bebidas calientes](.
 
 ![Template_Bebidas_Calientes](./../img/Template_Bebidas_Calientes.png)
 
-Para observar un ejemplo de implementación dirijasé a la siguiente [código](./../src/Bebida.py)
+Para observar un ejemplo de implementación diríjase al siguiente [código](./../src/Bebida.py)
 
 ### **Solución para problema de la UCR**
 Para generar una solución más óptima al [problema de la UCR](./Problema.md) podemos utilizar el patrón de comportamiento Template Method, ya que se logrará definir una estructura por medio de pasos para todos los cursos que sean creados en un futuro y evitar redundancia de código al declarar e implementar los métodos que son utilizados por todos los cursos en una clase en común.
 
-Por lo que, siguiendo lo definido por este patrón, es necesario crear una clase abstracta denominado curso que contiene métodos como CrearCurso(), AsignarSigla(), AsignarSemestreAño(), AsignarProfes(), CrearPlantillaPlataforma(), InscribirEstudiantes() y AsignarAsistente().
+Por lo que, siguiendo lo definido por este patrón, es necesario crear una clase abstracta denominada curso que contiene métodos como CrearCurso(), AsignarSigla(), AsignarSemestreAño(), AsignarProfes(), CrearPlantillaPlataforma(), InscribirEstudiantes() y AsignarAsistente().
 
 El método CrearCurso() será el método plantilla que va a definir la estructura de la creación de cursos.
 
@@ -18,6 +18,6 @@ Con respecto a los métodos AsignarSigla(), AsignarSemestreAño(), AsignarProfes
 
 ![Template_Cursos_UCR](./../img/Template_Cursos_UCR.PNG)
 
-Para observar un ejemplo de implementación diríjase a la siguiente [código](./../src/Cursos.py)
+Para observar un ejemplo de implementación diríjase al siguiente [código](./../src/Cursos.py)
 
 [Regresar al Readme](./../README.md)
