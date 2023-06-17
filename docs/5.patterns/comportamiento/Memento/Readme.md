@@ -10,6 +10,7 @@
 - [Patrón Memento o Patrón Token](#patrón-memento-o-patrón-token)
   - [Tabla de Contenidos](#tabla-de-contenidos)
   - [Problema](#problema)
+  - [Solución](#solución)
 
 ***
 
@@ -34,6 +35,29 @@ FIGURA 2: Estado anterior del correo
 FIGURA 3: Estado inicial del correo
 
 Además, en el sistema de Correo Institucional, no solo es posible regresar al estado anterior al actual, sino que también se tiene la opción de regresar al estado inicial del correo si se continúa utilizando la acción "Ctrl + z" (**Figura 3**) de manera consecutiva. Esto permite retroceder y restaurar el texto al punto en el que se comenzó a redactar el correo.
+
+[Volver al índice](#tabla-de-contenidos)
+***
+
+## Solución
+
+El patrón Memento utiliza y se basa en tres componentes principales para definir e implementar su estructura, que pueden ser observados en el diagrama UML de la **Figura 4**:
+
+![umlMemento](./images/DiagramaUMLMemento.svg)
+
+FIGURA 4: Diagrama UML del patrón de comportamiento Memento
+
+**Memento**
+La clase Memento es responsable de almacenar la información del estado en un momento específico del componente *Originator*, conocido comúnmente como *snapshot*. Contiene toda la información necesaria para restaurar versiones anteriores de manera precisa. Estos objetos Memento se guardan en una estructura de datos en el componente *Caretaker*. Es importante destacar que el acceso a los datos del Memento se limitan únicamente al componente *Originator*, ya que éste utiliza los datos para recuperar estados anteriores (Haythornwaite, 2002, p. 285).
+
+**Originator**
+El Originator es la clase de la cual se toma el *snapshot* que se almacena en los objetos *Memento*. Es el componente que contiene el estado actual del sistema y utiliza objetos *Memento* para recuperar estados anteriores (Haythornwaite, 2002, p. 165). Esta clase interactúa directamente con los objetos *Memento*, ya que necesita leer su contenido para restaurar sus datos.
+
+**Caretaker**
+El Caretaker es el componente encargado de almacenar los *snapshots*, es decir, los objetos *Memento*. También es responsable de implementar las interfaces que permiten al cliente indicar a la clase *Originator* guardar el estado actual o volver a un estado anterior específico. Este componente no interactúa directamente con los objetos Memento ni puede acceder a su información, simplemente los almacena (Haythornwaite, 2002, p. 165).
+
+**Interacción entre los componentes**
+En el patrón Memento, los componentes interactúan de la siguiente manera: el cliente por medio de la interfaz Caretaker solicita al Originator guardar su estado actual, por lo que el Originator crea un nuevo objeto Memento y se lo devuelve al Caretaker para que lo almacene. Cuando el cliente solicita volver a un estado anterior, el Caretaker proporciona al Originator el estado deseado que está almacenado en el Memento. El Originator toma el *snapshot* del estado y lo aplica, volviendo al estado previo. Esto permite ocultar la implementación y los datos del Memento y del Originator a clases externas.
 
 [Volver al índice](#tabla-de-contenidos)
 ***
