@@ -269,6 +269,15 @@ int main() {
 
 ### 6.1 Pasos de implementación
 
+1. Declarar la interfaz Command con un método de ejecución único.
+2. Extraer las solicitudes en clases concretas Command que implementan la interfaz Command. Cada clase debe tener un conjunto de atributos para guardar los argumentos de las solicitudes y una referencia al objeto Receiver. Todos estos valores deben inicializarse en el constructor de la clase concreta Command.
+3. Identificar las clases que actúan como Invokers. Agregar atributos para guardar los comandos en estas clases. Los Invokers deben comunicarse con los comandos a través de la interfaz Command. Por lo general, los Invokers no crean los objetos Command por sí mismos, sino que los obtienen del código cliente.
+4. Modificar los Invokers para que ejecuten el comando en lugar de enviar directamente una solicitud al objeto Receiver.
+5. El cliente debe inicializar los objetos en el siguiente orden:
+    * Crear los objetos Receivers.
+    * Crear los comandos y asociarlos, si es necesario, con los objetos Receivers.
+    * Crear los Invokers y asociarlos con los comandos específicos.
+
 ### 6.2 Aplicabilidad
 
 * Cuando se desee parametrizar objetos con operaciones: El patrón Command puede convertir una llamada de método específico en un objeto independiente. Este cambio abre muchos usos interesantes: puede pasar comandos como argumentos de método, almacenarlos dentro de otros objetos, cambiar comandos vinculados en tiempo de ejecución, etc.
