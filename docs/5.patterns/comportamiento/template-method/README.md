@@ -8,16 +8,18 @@
 
 ## Contenidos
 
-1. [Definición](#)
-2. [Estructura Básica](#)
-3. [Problema](#)
-4. [Solución](#)
-6. [Consecuencias](#)
-7. [Implementación](#)
-8. [Relación con otros patrones](#)
-9. [Referencias](#)
+1. [Definición](./content/Definicion.md)
+2. [Estructura Básica](./content/Estructura.md)
+3. [Problema](./content/Problema.md)
+4. [Solución](./content/Solucion.md)
+5. [Código UCR](./src/Cursos.py)
+6. [Código Bebidas](./src/Bebida.py)
+7. [Consecuencias](./content/Consecuencias.md)
+8. [Implementación](./content/Implementacion.md)
+9. [Relación con otros patrones](./content/Patrones_Relacionados.md)
+10. [Referencias](./content/Referencias.md)
 
-Para ver un resumen de los contenidos diríjase a la siguiente [presentación](#)
+Para ver un resumen de los contenidos diríjase a la siguiente [presentación](./presentation/Template%20Method.pdf)
 
 ## About
 
