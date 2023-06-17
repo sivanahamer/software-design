@@ -31,7 +31,49 @@ Además pensemos en que la comida que nos trajeron no fue lo que pedimos, podrí
 
 ## 3. Problema
 
+En ocasiones, nos encontramos en la necesidad de realizar solicitudes a objetos sin tener conocimiento previo sobre cómo se realizan las operaciones o quién es el receptor de dichas solicitudes. Tomemos como ejemplo un sistema de matrícula universitaria que cuenta con operaciones de agregar y borrar. En este momento, deseamos añadir operaciones de deshacer y rehacer, así como también tener la capacidad de agregar futuras operaciones sin alterar las existentes. Para lograr esto, contamos con una interfaz de usuario que presenta botones correspondientes a cada una de las operaciones mencionadas. La solución más sencilla sería crear una clase base y subclases para cada una de las operaciones.
+
+![Problem 1](./img/command_problem_1.png)
+
+Sin embargo, esta solución presenta varios problemas. En primer lugar, se requiere crear numerosas clases, y cada vez que la clase base se modifica, es necesario realizar cambios en todas las subclases. Como resultado, el código de la interfaz depende del código relacionado con la lógica de negocio. Además, surge otro problema cuando otras clases realizan las mismas operaciones. Por ejemplo, si tenemos un botón para agregar un curso, es posible que también exista otra forma de agregar cursos a través de un enlace. Esto genera redundancia de código y complicaciones adicionales.
+
+![Problem 2](./img/command_problem_2.png)
+
 ## 4. Solución
+
+Un buen diseño de software se basa en el principio de separación de responsabilidades. Para abordar los problemas mencionados anteriormente, se propone implementar el patrón de diseño conocido como Command. Este patrón encapsula una solicitud como un objeto, lo que permite ejecutar diferentes solicitudes con diferentes parámetros, así como encolar o registrar solicitudes, y proporciona la capacidad de realizar operaciones de deshacer y rehacer. El punto central del patrón es convertir las solicitudes en objetos, lo que implica crear objetos para representar las solicitudes realizadas a los objetos de una aplicación. La solicitud puede ser almacenada o pasada como un argumento. El patrón establece una interfaz común para ejecutar operaciones. En lugar de que los objetos envíen las solicitudes directamente, el programador extrae las partes de la solicitud, como el objeto receptor, el nombre del método y la lista de argumentos, y las encapsula en una clase llamada Command. Esta clase incluye un método que permite ejecutar la solicitud correspondiente. Los objetos Command actúan como enlaces entre el código de la interfaz de usuario y el código de negocio. Gracias a este enfoque, el objeto de la interfaz no necesita conocer los detalles del objeto receptor ni cómo se procesa la solicitud.
+
+![Solution 2](./img/command_solution_2.png)
+
+Todos los comandos implementan la misma interfaz, generalmente con un método de ejecución sin parámetros. Esta característica permite utilizar los comandos con el mismo Invoker, sin acoplarlos a una clase de comandos concreta. Además, es posible cambiar los objetos Command asociados al Invoker, lo que modifica efectivamente el comportamiento del Invoker durante la ejecución del código. Al utilizar el patrón command, ya no es necesario crear múltiples subclases de botones para implementar comportamientos diferentes. En su lugar, basta con tener un atributo en la clase del botón que guarda una referencia al objeto Command correspondiente, y hacer que el botón ejecute el comando cuando sea necesario. De manera similar, otros elementos de la interfaz, como los enlaces, pueden implementar la misma operación utilizando los comandos adecuados. De esta forma, los componentes relacionados con las mismas operaciones se conectan mediante los mismos comandos, evitando la redundancia de código.
+
+![Solution 3](./img/command_solution_3.png)
+
+### Diagrama
+
+![Solution 1](./img/command_solution_1.png)
+
+### Estructura
+
+#### Clase Invoker
+
+La clase Invoker utiliza el objeto Command para realizar solicitudes. Es responsable de enviar las solicitudes a través de la ejecución del comando. Tiene un atributo que guarda una referencia al objeto Command correspondiente. En lugar de enviar directamente la solicitud al objeto Receiver, el Invoker ejecuta el comando. No tiene la responsabilidad de crear el objeto Command, ya que este se crea en el cliente.
+
+#### Interfaz Command
+
+La interfaz Command declara una interfaz para ejecutar una operación. Define un único método que permite ejecutar el comando.
+
+#### Clases Concretas Command
+
+Las clases concretas Command definen un enlace entre un objeto Receiver y una acción específica. Implementan el método execute y ejecutan la operación correspondiente en el objeto Receiver. Además, implementan varias solicitudes según sea necesario. Es importante destacar que un objeto concreto Command no realiza el trabajo en sí, sino que pasa la llamada al objeto de la lógica de negocio correspondiente. Aunque, para simplificar el código, es posible combinar estas clases. Los parámetros necesarios para ejecutar un método en el objeto Receiver pueden declararse como atributos en la clase concreta Command.
+
+#### Clase Receiver
+
+La clase Receiver conoce cómo realizar las operaciones asociadas para llevar a cabo una solicitud. Cualquier clase puede actuar como un Receiver. El Receiver contiene parte de la lógica de negocio necesaria para ejecutar la solicitud. En la mayoría de los casos, los comandos configuran cómo se envía la solicitud al objeto Receiver, mientras que el objeto Receiver realiza el trabajo real.
+
+#### Client
+
+El cliente es responsable de crear un objeto concreto Command y proporcionar el objeto Receiver correspondiente. El Invoker guarda el objeto concreto Command. A continuación, el Invoker realiza una solicitud para ejecutar el comando. El objeto concreto Command ejecuta las operaciones necesarias en el Receiver para llevar a cabo la solicitud. El cliente crea y configura los objetos concretos Command según sea necesario. Además, el cliente proporciona todos los parámetros necesarios para la solicitud. Una vez creado, el comando puede asociarse con uno o más objetos Invoker, según las necesidades del sistema.
 
 ## 5. Ejemplo en código
 
