@@ -1,5 +1,11 @@
 # Strategy
 
+# Integrantes
+
+Carlos Antonio Sanchez Blanco - C17226
+
+Juan Carlos Aguilar Torres - C10144
+
 # Descripción del patrón
 
 El patrón `Strategy` es un patrón de comportamiento, el cual toma un **problema** con la peculiaridad de **ser resuelto o ejecutado de distintas formas**
@@ -26,17 +32,19 @@ Es buena práctica realizar un procedimiento el cual engloba:
 > 
 > **Beneficios y Perjuicios** de la implementación
 
-Es bastante fácil identificar un problema que se beneficie de usar el patrón strategy, los principales factores que el patrón strategy toma en cuenta son:
+Esto nos permite identificar en nuestro codigo el problema que resuelve el Strategy, el cual puede ser resuelto o ejecutado por distintas funciones dependiendo de los datos del contexto
+
+Es bastante fácil identificar un problema que se beneficie de usar el patrón strategy, los principales factores que el patrón strategy toma en cuenta de mayor a menor son:
 1. Tipo de datos que serán procesados, qué atributos de estos datos hace que sea necesario tratarlos de una forma u otra
 2. Beneficios y Perjuicios de distintos procedimientos que sigue el programa para un mismo problema, no sólo dependiendo de los datos que serán procesados, sino también el estado en el que el programa se encuentra por ejemplo
 
-Habiendo definido los requerimientos del código cliente, ahora toca hacer la implementación, una solución poco eficiente, sería declarando sólo funciones las cuales serían las soluciones
+Habiendo definido los requerimientos del código cliente, ahora toca hacer la implementación, una solución poco eficiente, sería declarando sólo funciones las cuales serían las soluciones en el codigo cliente
 
 El problema con esta implementación es el **alto acoplamiento** con el código cliente y **baja escalabilidad**
 
 La solución ideal es el patrón strategy, el cual elimina exactamente esos problemas
 
-Ya que el acoplamiento se pasa a la clase que hace de puente, y la cantidad de soluciones no afecta negativamente el programa ya que el código cliente no llama explícitamente la función, sólo conoce la existencia de la solución, lo que lo hace más escalable
+Ya que el acoplamiento se pasa a la clase que hace de puente, y la cantidad de soluciones no afecta negativamente el programa ya que el código cliente no llama explícitamente la función, sólo conoce la solución que necesita, lo que lo hace más escalable
 
 # Problema
 Una buena forma de visualizar este patrón de forma más práctica es con un problema, uno que está relacionado con la UCR es el método de autenticación e ingreso
@@ -126,6 +134,16 @@ También existe una abstracción más sobre **La elección de la estrategia**, e
 # Ejemplo en código
 El ejemplo en código se encuentra [aqui](src/StrategyExample.cpp)
 
+Para compilar, basta con
+```bash
+make
+```
+
+Para ejecutar
+```bash
+bin/Strategy <tamanho> <rango>
+```
+
 Este ejemplo en codigo se basa en saber que algoritmo se adapta mejor a un arreglo para ordenar una lista de numeros random con el algoritmo mas rapido para este tipo de arreglo
 
 Tomemos por ejemplo un arreglo de numeros de tamaño 100
@@ -192,6 +210,40 @@ Tanto Strategy como State se centran en encapsular comportamientos en clases sep
 
 * Command: 
 Tanto el patrón Strategy como Command se centran en encapsular acciones en clases y tienen una abstracción adicional entre el código cliente y la función a realizar. Sin embargo, difieren en su enfoque principal. El patrón Command se centra en definir diferentes tipos de acciones, cada una encapsulada en una clase separada, y permite al cliente ejecutar estas acciones de manera flexible. Por otro lado, Strategy se centra en encapsular una única acción con múltiples implementaciones posibles. En Strategy, el énfasis está en la variabilidad de las estrategias, mientras que en Command, el énfasis está en proporcionar una abstracción para diferentes comandos.
+
+# Principios de disenho
+
+> Principio de resonsabilidad unica
+
+Este principio ciertamente se cumple gracias a la clase `Contexto`, la cual quita responsabilidades al codigo cliente y se encarga el mismo de manejar las estrategias, las cuales son las implementaciones de las soluciones
+
+> Principio Open/Closed
+
+Este igual se cumple, gracias al hecho de que la estructura de comunicacion, o sea las interfaces `Contexto` y `Estrategia Abstracta` no necesitan cambios al anhadir funcionalidad, y si los necesitan seran pocos, y al anhadir nuevas funciones al programa lo que se hace es crear mas clases del tipo `Estrategia Concreta`
+
+> Segregacion de interfaces
+
+Lo cumple tanto para el `codigo cliente` y `las soluciones`, porque define una clase para cada uno, haciendo que ahora se dependan de abstracciones por interfaces antes que puras implementaciones
+
+> Inversion de dependencias
+
+Lo cumple por medio de la clase `Estrategia Abstracta`, ya que hace que el codigo cliente solo necesite conocerlas soluciones, y para ejecutarlas llama a alguien que las ejecuta por el, dando toda esa carga a esa otra clase, y esta clase, la clase `Contexto` igualmente se beneficiade la inversion de dependencias por solo tener que saber **que es una solucion** y no **tener que saber todas las soluciones**
+
+> DRY
+
+Este patron es bueno para cuando se **necesita hacer un preprocesado antes de ejecutar cualquier solucion**, porque ese codigo solo se encontraria en la clase `Contexto`, la cual ejecuta las soluciones, y sin este patron, el codigo cliente necesitaria manejar ese preprocesado, teniendolo como otra funcion junto a las soluciones, incrementando el acoplamiento, o metiendo ese codigo en cada solucion, lo que es una repeticion de codigo terrible
+
+Pero se soluciona muy facilmente con la clase `Contexto`
+
+> KISS
+
+Es mas simple solo poner funciones extras en el codigo cliente, o incluso tenerlas en una clase mas que hacer 2 clases que funcionan como interfaz, y n cantidad de clases que serian las soluciones, por lo que no cumple este principio y puede llevar a algunas malas implementaciones, donde la cura termina siendo peor que la enfermedad
+
+Pero no llega a ningun extremo
+
+> OOP
+
+Cumple totalmente con el paradigma orientado a objetos, porque cada solucion es una clase, la cual hereda de otra clase, una abstraccion, y el Contexto igual es otra clase
 
 # Referencias
 
