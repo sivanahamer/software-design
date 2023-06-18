@@ -7,20 +7,32 @@ Supongamos que tenemos una solicitud. Esa solicitud debe de pasar por diferentes
 quién o quiénes pueden manejarla. Una solución a este problema es la utilización del patrón Chain of Responsibility.
 
 También, imaginemos que usted tiene un sistema de solicitudes, el cual puede ser manejado por diferentes Handlers.
+
+
 ![Sistema simple de manejadores](https://github.com/sivanahamer/software-design/assets/82900350/51610aee-23c5-48b3-a564-2a9d82748635)
+
+
 *Figura 1. Elaboración propia*
 
 
 Sin embargo su sistema crece demasiado y ocupa una solución que le provea flexibilidad. Es decir, que sea simple añadir 
 manejadores o remover. El patrón chain of responsibility es una excelente opción.
+
+
 ![Sistema complejo de solicitudes](https://github.com/sivanahamer/software-design/assets/82900350/887d6e73-22b2-4fc5-8c91-716834e2c1fa)
+
+
 *Figura 2. Elaboración propia*
 
 
 ## SOLUCIÓN
 Para dicho sistema, tal y como se mencionó, lo ideal es establecer una cadena de responsabilidad, en el cual, la solicitud se va pasando de manejador en manejador, hasta que 
 uno o varios, manejen la solicitud.
+
+
 ![Manejadores pasándose la solicitud](https://github.com/sivanahamer/software-design/assets/82900350/98c8d533-c05d-4db1-b512-0fd11004663a)
+
+
 
 *Figura 3. Imagen tomada de Refactoring Guru*
 
@@ -28,6 +40,7 @@ uno o varios, manejen la solicitud.
 Básicamente se establece una cadena de objetos encadenados. Cada objeto tiene la opción de manejar la solicitud o pasarla al siguiente objeto en la cadena. Esto reduce el acoplamiento, ya que el remitente solo necesita enviar la solicitud al primer objeto de la cadena, y cada objeto decide si puede manejarla o pasarla al siguiente objeto. Esto permite una mejor mantenibilidad y flexibilidad del código, ya que los objetos de manejo pueden agregarse o eliminarse sin afectar al remitente.
 
 ## Estructura
+
 
 ![Estrucutra de COR](https://github.com/sivanahamer/software-design/assets/82900350/43435f3f-72bd-40e4-9bf6-c85910cb843b)
 
@@ -44,14 +57,19 @@ En sí, la estrucutra esta formada por los siguientes elementos:
 ## Ejemplo con la UCR: Sistema de Solicitudes
 Imagine que la universidad tiene un sistema de solicitudes, la cual reparte las solicitudes entre todos sus órganos (Registro, Oficina de Becas,
 Oficina de Bienestar y Salud, ...)
+
+
 ![Imagen del ejemplo de la UCR. Imagen 1](https://github.com/sivanahamer/software-design/assets/82900350/70e4e205-e673-465c-ba56-94d63bbd3c9e)
+
 
 *Figura 5. Elaboración propia*
 
 Sin embargo, cada vez que se cree un órgano en la institución, se deberá integrar en el sistema o bien, si uno cierra se deberá de eliminar, mismamente una solicitud
 puede ser tratada por varios órganos a la vez. Por lo tanto una vía sencilla de manejar este sistema es por medio de la implementación del patrón: Chain of Responsibility.
 
+
 ![Imagen del ejemplo de la UCR. Imagen 2](https://github.com/sivanahamer/software-design/assets/82900350/53bfbf2a-d5aa-441f-9e5d-ef2e521dfe12)
+
 
 *Figura 6. Elaboración propia*
 
@@ -60,12 +78,12 @@ El sistema principal sería el cliente, y cada uno de los órganos de la UCR, se
 ## COLABORACIONES
 
 El sistema de colaboración es muy sencillo. El cliente envía la solicitud y cada concrete Handler propaga la solicitud entre los sucesores.
+
+
 ![Colaboraciones en COR](https://github.com/sivanahamer/software-design/assets/82900350/da0c671c-8b71-4f8d-abe3-78fb55c84fb5)
 
 
 *Figura 6. Elaboración propia*
-
-
 
 
 
