@@ -15,6 +15,12 @@ El patrón Proxy se utiliza en situaciones en las que se necesita un objeto más
 
 Un ejemplo de la vida cotidiana que se asemeja al patrón Proxy es el uso de un asistente personal. Al igual que un proxy actúa como intermediario entre el cliente y el objeto real, un asistente personal actúa como intermediario entre una persona y sus tareas diarias. Al delegar ciertas tareas a su asistente personal, la persona puede enfocarse en tareas más importantes y complejas, de la misma manera en que el cliente puede interactuar con el objeto real a través del proxy sin preocuparse por los detalles de implementación. Además, al igual que un proxy puede proporcionar una capa adicional de seguridad al ocultar el objeto real del cliente, un asistente personal puede proporcionar una capa adicional de privacidad al manejar tareas delicadas y personales en nombre de su cliente.
 
+
+## Estructura de clases del patrón Proxy
+
+![Clases UML](docs/5.patterns/estructurales/Proxy/img/UML clases.png)
+
+
 ## Ejemplo de implementación del patrón Proxy en Java
 
 ```java
@@ -165,3 +171,6 @@ El patrón Proxy es una herramienta poderosa para mejorar el rendimiento y la fl
 ## Referencias
 
 https://refactoring.guru/design-patterns/proxy#:~:text=Proxy%20is%20a%20structural%20design,through%20to%20the%20original%20object.
+
+https://reactiveprogramming.io/blog/es/patrones-de-diseno/proxy
+
