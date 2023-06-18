@@ -4,4 +4,4 @@ sidebar_position: 1
 
 # Introducción
 
-HERE WILL BE TEXT.
+Estos patrones detallan cómo se pueden delegar *responsabilidades* entre objetos.
