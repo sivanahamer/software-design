@@ -18,7 +18,7 @@ Un ejemplo de la vida cotidiana que se asemeja al patrón Proxy es el uso de un 
 
 ## Estructura de clases del patrón Proxy
 
-![Clases UML](docs/5.patterns/estructurales/Proxy/img/UML clases.png)
+![Clases UML](/../Proxy/img/UML.png)
 
 
 ## Ejemplo de implementación del patrón Proxy en Java
