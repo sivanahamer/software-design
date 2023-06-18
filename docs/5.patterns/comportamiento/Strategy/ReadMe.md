@@ -132,7 +132,7 @@ Así se logra el patrón strategy en su forma más pura, donde el código client
 También existe una abstracción más sobre **La elección de la estrategia**, el cual hace que la clase que hace de puente se encargue también de tener una lógica especial encargada a, basándose con los datos proveidos del código cliente, usar por su propia cuenta las estrategia y quitarle una carga más al código cliente de tener que conocer las estrategias para usar
 
 # Ejemplo en código
-El ejemplo en código se encuentra [aqui](src/StrategyExample.cpp)
+El ejemplo en código se encuentra [aqui](src/Strategy.cpp)
 
 Para compilar, basta con
 ```bash
