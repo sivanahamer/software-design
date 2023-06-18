@@ -99,6 +99,8 @@ Para implementar este patrón en el programa, lo mínimo necesario es hacer las 
 
 <img src="./img/StrategyImg3.png" alt="Facade"/> 
 
+Fuente: [Refactoring Guru](https://refactoring.guru/design-patterns/strategy)
+
 * Contexto
 
 La clase que hace de **puente** entre el código cliente y las estrategias
