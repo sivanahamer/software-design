@@ -15,6 +15,7 @@
   - [Consecuencias](#consecuencias)
   - [Implementación](#implementación)
   - [Relación con otros patrones](#relación-con-otros-patrones)
+  - [Relación con principios de diseño](#relación-con-principios-de-diseño)
   - [Referencias](#referencias)
   - [Anexo](#anexo)
 
@@ -123,6 +124,19 @@ El patrón Memento se relaciona con otros patrones de diseño debido a su natura
 - **Editor:** Estos patrones se relacionan en el contexto de la edición y gestión de documentos. El patrón Memento captura y almacenar el estado de un documento en diferentes momentos, mientras que el patrón Editor proporciona interfaces de edición y coordina las acciones relacionadas con la manipulación del documento. De esta manera ambos patrones brindan una forma eficiente de gestionar la edición y el historial de cambios en un editor de documentos.
 
 - **State:** El patrón State se utiliza para representar diferentes estados de un objeto y controlar su comportamiento en función de su estado actual. En conjunto, estos patrones pueden proporcionar una forma flexible y eficiente de gestionar el estado y el comportamiento de un objeto en un sistema.
+
+[Volver al índice](#tabla-de-contenidos)
+***
+
+## Relación con principios de diseño
+
+- **Principio de Responsabilidad Única:** El patrón separa la responsabilidad de almacenar los estados de la clase Originator y se la delega a la clase Memento, que es responsable únicamente de encapsular el estado y no debe tener ninguna lógica adicional. Gracias a esto se sigue este principios de SOLID, pues se evita que la clase Originator tenga más responsabilidades de las necesarias.
+
+- **Programación Orientada a Objetos:** Este patrón busca mantener la encapsulación de los datos de los objetos Memento, con el fin de evitar que clases externas puedan ingresar a la información del Memento. Este objeto puede ser almacenado en otras clases pero su información solo puede ser ingresada por la clase Originator.
+
+- **KISS:** El patrón Memento no vuelve el sistema más simple por si mismo, pero una correcta implementación puede crear una lógica y código más simple y sencilla de comprender.
+
+- **DRY:** El patrón Memento, al igual que el principio KISS, no aborda directamente la duplicidad de código, pero su implementación adecuada puede prevenir la duplicación en la gestión de estados al centralizar la interfaz de guardado y recuperación de estados del sistema. Esto permite una gestión eficiente y coherente del estado sin repetir lógica en múltiples partes del código.
 
 [Volver al índice](#tabla-de-contenidos)
 ***
