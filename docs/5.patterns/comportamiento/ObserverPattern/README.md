@@ -65,7 +65,7 @@ A continuación se motrará una imagen que explica de forma visual y simple como
 
 ![Imagen del correo](./img/EjemplosObserver.png)
 
-|Imagen 2. Imagen de cuando netflix y youtube notifica a todos los usuarios utilizando el patrón observer|
+|Imagen 2. Imagen de cuando netflix y youtube notifica a todos los usuarios utilizando el patrón observer [4]|
 | :----------: |
 
 ## **Solución:**
@@ -149,7 +149,7 @@ Si desea ver el código y probarlo tenga en cuenta las siguientes indicaciones:
 
 2. Luego irse a la carpeta con el src (Ejemplo de path: **C:\Users\fasav\OneDrive\Desktop\UCR\Primer semestre 2023\Diseño\ObserverPattern\ObserverCode\src>**) 
 
-3. Compilar con el botón de **play** de Visual Studio o utilizando el comando **python observer.py**
+3. Compilar con el botón de **play** ▶️ de Visual Studio o utilizando el comando **python observer.py**
 
 ### **Enlace para ver el código:**
 
@@ -159,7 +159,7 @@ Si desea ver el código y probarlo tenga en cuenta las siguientes indicaciones:
 
 ### **Enlace para ver el código:**
 
-Presentación utilizada en clase para exponer el patrón, tiene imagenes del ejemplo en código y elementos más detallados y visuales
+Presentación utilizada en clase para exponer el patrón, tiene imágenes del ejemplo en código y elementos más detallados y visuales
 
 [Presentación Observer"](./ObserverCode/src)
 
@@ -168,4 +168,8 @@ Presentación utilizada en clase para exponer el patrón, tiene imagenes del eje
 
 [2] BettaTech. (2020, 26 de septiembre). *OBSERVER (El PATRÓN que lo ve TODO) | PATRONES de DISEÑO* [Video]. YouTube. https://www.youtube.com/watch?v=HFkZb1g8faA
 
-[3] Observer". *Refactoring and Design Patterns*. https://refactoring.guru/design-patterns/observer (accedido el 31 de mayo de 2023).
+[3] Observer". *Refactoring and Design Patterns*. https://refactoring.guru/design-patterns/observer.
+
+[4] Gaitonde, A. (2021). Observer Design Pattern — Explained In Five Minutes. https://medium.com/swlh/observer-design-pattern-explained-in-five-minutes-c01113666318
+
+
