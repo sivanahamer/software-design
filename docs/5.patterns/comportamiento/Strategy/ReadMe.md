@@ -45,9 +45,7 @@ Donde por ejemplo, digamos que se puede acceder a los recursos de un sitio de la
 
 Además de cuentas, se puede llevar el mismo problema a métodos de evaluación en mediación virtual, los cuales pueden ser `exámenes` o `proyectos`, este al igual que el problema anterior, **tienen varias formas de hacer una misma cosa**, 
 
-//===========================  
-//=====  TODO: Poner la cuarta diapositiva de la presentación strategy  
-//===========================  
+<img src="./img/StrategyImg1.png" alt="Facade"/>
 
 # Solución
 
@@ -94,12 +92,12 @@ Con todas estas piezas definidas en el programa, ahora será mucho más sencillo
 
 El código cliente sólo le basta tener una instancia del `Contexto` y una de las soluciones, darle la solución al `Contexto` para que la ejecute, y recibir el resultado de forma despreocupada a ejecutar la solución como tal
 
+<img src="./img/StrategyImg2.png" alt="Facade"/>
+
 # Implementación del patrón
 Para implementar este patrón en el programa, lo mínimo necesario es hacer las clases:
 
-//===========================  
-//=====  TODO: Poner una imagen del UML del patrón strategy y ==fuente== si es que  //=====  
-//===========================  
+<img src="./img/StrategyImg3.png" alt="Facade"/> 
 
 * Contexto
 
@@ -128,11 +126,11 @@ El ejemplo en código se encuentra [aqui](src/StrategyExample.cpp)
 
 Este ejemplo en codigo se basa en saber que algoritmo se adapta mejor a un arreglo para ordenar una lista de numeros random con el algoritmo mas rapido para este tipo de arreglo
 
-Tomemos por ejemplo un arreglo de numeros de tamanho 100
+Tomemos por ejemplo un arreglo de numeros de tamaño 100
 
 El problema de ordenar los numeros de la forma mas rapida posible tiene distitnos factores, uno de ellos el cual es muy significante es el **rango el cual un numero puede tomar**(si el rango es de 1-9 en el ejemplo, entonces habrian 100 numeros entre 1-9)
 
-Si el rango es pequenho, o sea que hay mucha repeticion de numeros, entonces un algoritmo de ordenamiento como Radix Sort o Heap Sort lograrian ordenar rapidamente el arreglo, pero si fuera muy largo, entonces esos algoritmos mas bien serian lentos, a comparacion de otros como el MergeSort
+Si el rango es pequeño, o sea que hay mucha repeticion de numeros, entonces un algoritmo de ordenamiento como Radix Sort o Heap Sort lograrian ordenar rapidamente el arreglo, pero si fuera muy largo, entonces esos algoritmos mas bien serian lentos, a comparacion de otros como el MergeSort
 
 Los algoritmos que se van a probar son
 
@@ -143,7 +141,7 @@ Los algoritmos que se van a probar son
 
 Con el problema definido, lo que pretende el programa es generar un arreglo aleatorio de numeros, dependiendo de los argumentos del programa que de el usuario, donde
 
-* **El primer argumento** es el tamanho del arreglo
+* **El primer argumento** es el tamaño del arreglo
 * **El segundo argumento** es el rango maximo que pueden tomat los numeros, con el rango minimo empezando en 0
 
 Por ejemplo:
@@ -159,12 +157,48 @@ Al ser devuelto, la clase `Sorter`, que hace como la clase Contexto, obtiene esa
 
 # Consecuencias
 
-TODO
+El patrón de diseño Strategy tiene varias consecuencias que es importante tener en cuenta al utilizarlo en el desarrollo de software.
+
+* Ventajas:
+
+Flexibilidad y extensibilidad: Una de las principales ventajas del patrón Strategy es su capacidad para agregar, cambiar o eliminar estrategias en tiempo de ejecución sin afectar el código cliente. Esto brinda una gran flexibilidad al sistema, ya que se pueden incorporar nuevas estrategias o modificar las existentes sin tener que modificar el código que las utiliza.
+
+Reutilización de código: El patrón Strategy fomenta la reutilización del código, ya que las estrategias pueden ser utilizadas en diferentes contextos y aplicaciones. Esto evita la duplicación de código y promueve la mantenibilidad del sistema, ya que las estrategias pueden ser compartidas y utilizadas en diferentes partes del código.
+
+Separación de responsabilidades: El patrón Strategy permite separar la implementación de un algoritmo de su uso y aplicación en el código cliente. Esto ayuda a mantener un diseño modular y facilita la comprensión y mantenimiento del código, ya que cada estrategia tiene una responsabilidad clara y está encapsulada en una clase separada.
+
+* Desventajas:
+
+Complejidad adicional: Al utilizar el patrón Strategy, se introduce una capa adicional de abstracción. Esto puede llevar a una mayor complejidad en el sistema si no se aplica de manera adecuada. Es importante diseñar las interfaces y las relaciones entre las clases de manera cuidadosa para evitar complicaciones innecesarias.
+
+Aumento del número de clases: Como cada estrategia se implementa en una clase separada, el uso del patrón Strategy puede resultar en un aumento en el número de clases en el sistema. Si no se maneja correctamente, esto puede dificultar la comprensión y el mantenimiento del código, especialmente en sistemas grandes y complejos.
+
+Posible degradación del rendimiento: El patrón Strategy implica un mayor nivel de indirección, ya que el código cliente debe interactuar con una interfaz y delegar la ejecución a una estrategia concreta. En comparación con una implementación directa del algoritmo, esto puede resultar en una pequeña degradación del rendimiento. Sin embargo, en la mayoría de los casos, esta degradación es insignificante y los beneficios de flexibilidad y reutilización superan cualquier impacto negativo.
 
 # Relacion con otros patrones
 
-TODO
+El patrón Strategy se puede contrastar con otros patrones de diseño, como Template Method, Composite, State y Command, en términos de su enfoque y uso.
+
+* Template Method: 
+Tanto el patrón Strategy como Template Method se basan en la encapsulación de algoritmos. Sin embargo, difieren en su enfoque. El patrón Strategy permite cambiar dinámicamente entre diferentes estrategias, mientras que Template Method utiliza la herencia para permitir la personalización de partes específicas del algoritmo. Mientras que Strategy se centra en cambiar la estrategia completa, Template Method se enfoca en permitir cambios en etapas específicas del algoritmo.
+
+* Composite: 
+El patrón Composite se utiliza para construir estructuras jerárquicas de objetos y tratarlos de manera uniforme. A diferencia de Strategy, que se enfoca en encapsular algoritmos, Composite permite la composición de múltiples objetos en una estructura compuesta. En el contexto de Strategy, esto significa que se pueden crear estrategias compuestas, donde una estrategia puede contener y combinar múltiples estrategias más pequeñas para lograr un comportamiento complejo.
+
+* State: 
+Tanto Strategy como State se centran en encapsular comportamientos en clases separadas y permitir cambios dinámicos entre ellos. Sin embargo, se diferencian en su enfoque principal. El patrón State se centra en el cambio de estado de un objeto, donde cada estado representa un comportamiento diferente. Por otro lado, Strategy se enfoca en encapsular una única acción con múltiples implementaciones posibles. Mientras que en State el cambio de estado afecta el comportamiento general del objeto, en Strategy el cambio de estrategia afecta solo a la acción específica que se está ejecutando.
+
+* Command: 
+Tanto el patrón Strategy como Command se centran en encapsular acciones en clases y tienen una abstracción adicional entre el código cliente y la función a realizar. Sin embargo, difieren en su enfoque principal. El patrón Command se centra en definir diferentes tipos de acciones, cada una encapsulada en una clase separada, y permite al cliente ejecutar estas acciones de manera flexible. Por otro lado, Strategy se centra en encapsular una única acción con múltiples implementaciones posibles. En Strategy, el énfasis está en la variabilidad de las estrategias, mientras que en Command, el énfasis está en proporcionar una abstracción para diferentes comandos.
 
 # Referencias
 
-TODO
+refactoring. (s. f.). Strategy - https://refactoring.guru/es/design-patterns/strategy
+
+Pankaj. (2022). Strategy Design Pattern in Java - Example Tutorial. DigitalOcean.
+https://www.digitalocean.com/community/tutorials/strategy-design-pattern-in-java-example-tutorial
+
+Mittal, N. (2021). Why we need Solid Principles and it’s types. Knoldus Blogs.
+https://blog.knoldus.com/why-we-need-solid-principles-and-its-types/
+
+Flaticon. (2023, June 10). Cube 3d Icon - 4783227. https://www.flaticon.com/free-icons/solid
