@@ -151,17 +151,17 @@ Si desea ver el código y probarlo tenga en cuenta las siguientes indicaciones:
 
 3. Compilar con el botón de **play** ▶️ de Visual Studio o utilizando el comando **python observer.py**
 
-### **Enlace para ver el código:**
+Para poder ver el código se debe de dirigir a la carpeta:
 
-[Carpeta con el código en python](/software-design/docs/patterns/comportamiento/ObserverPattern/ObserverCode/src/observer.py)
+**ObserverPattern/ObserverCode/src/observer.py**
 
 ## Presentación
 
-### **Enlace para ver el código:**
-
 Presentación utilizada en clase para exponer el patrón, tiene imágenes del ejemplo en código y elementos más detallados y visuales
 
-[Presentación Observer](/software-design/docs/patterns/comportamiento/ObserverPattern/ObserverCode/Presentation/ObserverPresentation.pdf)
+Se encuentra en la ruta:
+
+**ObserverPattern/Presentation/ObserverPresentation.pdf**
 
 ## **Bibliografía**
 [1] Helm, R., Gamma, E., Vlissides, J., & Johnson, R. (2005). *Design Patterns*. Addison Wesley
