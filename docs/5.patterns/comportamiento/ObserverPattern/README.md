@@ -153,7 +153,7 @@ Si desea ver el código y probarlo tenga en cuenta las siguientes indicaciones:
 
 ### **Enlace para ver el código:**
 
-[Carpeta con el código en python"](./ObserverCode/src)
+[Carpeta con el código en python](/software-design/docs/patterns/comportamiento/ObserverPattern/ObserverCode/src/observer.py)
 
 ## Presentación
 
@@ -161,7 +161,7 @@ Si desea ver el código y probarlo tenga en cuenta las siguientes indicaciones:
 
 Presentación utilizada en clase para exponer el patrón, tiene imágenes del ejemplo en código y elementos más detallados y visuales
 
-[Presentación Observer"](./ObserverCode/src)
+[Presentación Observer](/software-design/docs/patterns/comportamiento/ObserverPattern/ObserverCode/Presentation/ObserverPresentation.pdf)
 
 ## **Bibliografía**
 [1] Helm, R., Gamma, E., Vlissides, J., & Johnson, R. (2005). *Design Patterns*. Addison Wesley
