@@ -18,7 +18,7 @@ Un ejemplo de la vida cotidiana que se asemeja al patrón Proxy es el uso de un 
 
 ## Estructura de clases del patrón Proxy
 
-![Clases UML, diseño basado en UML de refactoring guru](/docs/5.patterns/estructurales/Proxy/img/UML.png)
+![Clases UML, diseño basado en UML de refactoring guru](../Proxy/img/UML.png)
 
 
 ## Ejemplo de implementación del patrón Proxy en Java
@@ -170,5 +170,7 @@ El patrón Proxy es una herramienta poderosa para mejorar el rendimiento y la fl
 
 ## Referencias
 
+https://refactoring.guru/design-patterns/proxy#:~:text=Proxy%20is%20a%20structural%20design,through%20to%20the%20original%20object.
 
-Refactoring.Guru. (2023b). Proxy. Refactoring
+https://reactiveprogramming.io/blog/es/patrones-de-diseno/proxy
+
