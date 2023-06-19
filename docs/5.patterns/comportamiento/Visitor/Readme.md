@@ -58,38 +58,38 @@ Como ejemplo utilizamos el sistemas de becas de la Universidad de Costa Rica. Lo
 
 ## Implementación del ejemplo en Java
 
-![example_factory](./Images/13.png)
+![example](./Images/13.png)
 **Interfaz Elements, se define un método accept que recibe un visitante.**
 
-![example_client](./Images/14.png)
+![example](./Images/14.png)
 **Concrete Elements, la instancia de la clase se pasa a sí misma como parámetro en el llamado del método visit.**
 
-![example_flyweight](./Images/16.png)
+![example](./Images/16.png)
 **Interfaz Visitor, se implementa el método visit por cada elemento existente.**
 
-![example_context](./Images/17.png)
+![example](./Images/17.png)
 **Concrete Visitors, el comportamiento dependerá del tipo de beca (instancia) que se reciba como parámetro.**
 
-![example_context](./Images/19.png)
+![example](./Images/19.png)
 **Cliente**
 
-![example_context](./Images/20.png)
+![example](./Images/20.png)
 **Ejemplo de iteración, se trabaja con todas las posibles combinaciones de visitantes y elementos**
 
-![example_context](./Images/21.png)
+![example](./Images/21.png)
 **Resultado**
 
 ## Importancia del Double Dispatch
 La técnica del Double Dispatch (o Doble Despacho) permite determinar el método a utilizar dependiendo de los objetos involucrados, estos pueden ser dos o más. Con el patrón visitor, el primer despacho es el llamado al método **accept** de los **elementos** y el segundo despacho corresponde el método **visit** de los **visitantes**. Si deseamos omitir la primer parte del despacho, la implementación del patrón fallará.  La implementación del método **accept** dentro de las instancias de los **elementos** le da esta certeza al compilador del tipo de instancia desde donde se está llamando el método; esto a su vez permite el llamado del método **visit** correcto, puesto que la instancia del **elementos** se pasa a sí misma como parámetro. Recordamos que el método **visit** dentro de **visitantes**, recibe instancias específicas de **elementos**, haciendo uso de overloading, el comportamiento de los métodos variará dependiendo de la firma de este. Si nos brincamos el primer despacho, el compilador no sabrá exactamente con qué tipo de instancia de los elementos se está lidiando, haciendo imposible saber cuál implementación del método **visit** utilizar.
 
-![example_context](./Images/24.png)
+![example](./Images/24.png)
 **Ejemplo de omisión del primer despacho**
 
-![example_context](./Images/25.png)
-![example_context](./Images/26.png)
+![example](./Images/25.png)
+![example](./Images/26.png)
 **El compilador nos pedirá implementar un método "visit" que reciba una clase base como parámetro**
 
-![example_context](./Images/27.png)
+![example](./Images/27.png)
 **Resultado (erróneo) de omitir el primer despacho, puesto que no se sabe con certeza la instancia del elemento, se utilizará el método visit que recibe la clase base**
 
 
