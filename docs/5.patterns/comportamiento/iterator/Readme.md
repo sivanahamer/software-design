@@ -57,13 +57,13 @@ Lista simple
 ![Mediación Virtual Lista simple](./img/Iterator-Page-7.drawio.png)
 
 
-Arbol
+Árbol
 
 ![Mediación Virtual Arbol](./img/Iterator-Page-8.drawio.png)
 
 ## Ejemplo de código
-
-Aquí tenemos una interfaz común Aggregate para el cliente ya que lo desacopla de la implementación de su colección de objetos.
+Se tomó de ejemplo un programa en Java para demostrar la implementación del patrón, el ejemplo es un sistema de notificaciones.
+Tenemos una interfaz común Aggregate para el cliente ya que lo desacopla de la implementación de su colección de objetos.
 El ConcreteAggregate implementa createIterator() que devuelve iterador para su colección.
 La responsabilidad de cada ConcreteAggregate es instanciar un ConcreteIterator que pueda iterar sobre su colección de objetos.
 La interfaz del iterador proporciona un conjunto de métodos para recorrer o modificar la colección que además de next()/hasNext() también puede proporcionar funciones para buscar, eliminar, etc.
@@ -100,21 +100,13 @@ La interfaz del iterador proporciona un conjunto de métodos para recorrer o mod
 
 ## Implementación:
 
-Utilice el patrón Iterator cuando su colección tenga una estructura de datos compleja pero desee ocultar su complejidad a los clientes (ya sea por conveniencia o por razones de seguridad).
+Utilice el patrón Iterator cuando su colección tenga una estructura de datos compleja pero desee ocultar su complejidad a los clientes (ya sea por conveniencia o por razones de seguridad): el iterador encapsula los detalles de trabajar con una estructura de datos compleja, proporcionando al cliente varios métodos simples para acceder a los elementos de la colección. Si bien este enfoque es muy conveniente para el cliente, también protege la colección de acciones descuidadas o maliciosas que el cliente podría realizar si trabaja directamente con la colección.
 
-El iterador encapsula los detalles de trabajar con una estructura de datos compleja, proporcionando al cliente varios métodos simples para acceder a los elementos de la colección. Si bien este enfoque es muy conveniente para el cliente, también protege la colección de acciones descuidadas o maliciosas que el cliente podría realizar si trabaja directamente con la colección.
+Use el patrón para reducir la duplicación del código transversal en su aplicación: el código de los algoritmos de iteración no triviales tiende a ser muy grande. Mover el código transversal a los iteradores designados puede ayudar a hacer que el código de la aplicación sea más ágil y limpio.
 
-Use el patrón para reducir la duplicación del código transversal en su aplicación.
-
-El código de los algoritmos de iteración no triviales tiende a ser muy grande. Mover el código transversal a los iteradores designados puede ayudar a hacer que el código de la aplicación sea más ágil y limpio.
-
-Utilice el iterador cuando desee que su código pueda atravesar diferentes estructuras de datos o cuando los tipos de estas estructuras se desconozcan de antemano.
-
-El patrón proporciona un par de interfaces genéricas tanto para colecciones como para iteradores. Dado que su código ahora usa estas interfaces, seguirá funcionando si le pasan varios tipos de colecciones e iteradores que implementan estas interfaces.
+Utilice el iterador cuando desee que su código pueda atravesar diferentes estructuras de datos o cuando los tipos de estas estructuras se desconozcan de antemano: el patrón proporciona un par de interfaces genéricas tanto para colecciones como para iteradores. Dado que su código ahora usa estas interfaces, seguirá funcionando si le pasan varios tipos de colecciones e iteradores que implementan estas interfaces.
 
 ## Relación con otros patrones:
-
-Puede usar iteradores para atravesar árboles compuestos.
 
 Puede usar Factory Method junto con Iterator para permitir que las subclases devuelvan diferentes tipos de iteradores que sean compatibles con las colecciones.
 
