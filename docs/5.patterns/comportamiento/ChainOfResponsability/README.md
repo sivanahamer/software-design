@@ -180,4 +180,3 @@ Gamma, Erich et.al. “Design Patterns”. Addison-Wesley, 1995.
 
 
 Refactoring.Guru. (2023). Chain of Responsibility. Refactoring.Guru. https://refactoring.guru/design-patterns/chain-of-responsibility
-
