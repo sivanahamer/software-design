@@ -178,6 +178,4 @@ El patrón de Chain of Responsibility (COR) se relaciona con los siguientes patr
 
 Gamma, Erich et.al. “Design Patterns”. Addison-Wesley, 1995.
 
-Refactoring.Guru. (2023). Chain of Responsibility. Refactoring.Guru. https://refactoring.guru/design-patterns/chain-of-responsibility
-
 Pankaj. (2022). Chain of responsibility design pattern in java. Digital Ocean. https://www.digitalocean.com/community/tutorials/chain-of-responsibility-design-pattern-in-java
