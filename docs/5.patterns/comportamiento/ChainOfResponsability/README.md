@@ -99,7 +99,7 @@ Hay dos principales variaciones a la hora de implementar la cadena de sucesión:
 
 Si no existe una relación entre clases que me permita crear una cadena, yo debo crearla manualmente. Esto significa que ahora el Handler no solo define una interfaz para los requests, sino que también tiene un sucesor. El tener este sucesor como atributo le permite tener una implementación default para el método de Handle. Entonces, si un ConcreteHandler no está interesado en manejar el request, simplemente no sobreescribe el método Handle, porque por default ya llama al sucesor a manejarlo.
 
-<img width="597" alt="image" src="https://github.com/sivanahamer/software-design/assets/79823004/04526e2a-5f73-41d2-83e9-9cbeb7c08eb5">
+<img width="597" alt="image" src="https://github.com/sivanahamer/software-design/assets/79823004/04526e2a-5f73-41d2-83e9-9cbeb7c08eb5"> <\img>
 
 ### Representación de requests
 
@@ -109,7 +109,7 @@ La otra alternativa es más flexible pero más insegura. Se trata de crear un ú
 
 Una solución a este problema del tipado del parámetro es crear una clase abstracta Request, que va a ser heredada por los diferentes tipos de requests. Finalmente, se pasa un puntero de un objeto Request al método HandleRequest y este lo desempaca dependiendo del tipo de request que sea (el tipo de request se obtiene al agregar un método a la clase Request que retorne el tipo).
 
-<img width="599" alt="image" src="https://github.com/sivanahamer/software-design/assets/79823004/4774ec8a-b496-4805-922a-2eb308bdea3f">
+<img width="599" alt="image" src="https://github.com/sivanahamer/software-design/assets/79823004/4774ec8a-b496-4805-922a-2eb308bdea3f"> <\img>
 
 ## Ejemplo en código
 
@@ -117,23 +117,23 @@ Supongamos que se quiere programar un ATM. Este por dentro tiene la capacidad de
 
 Se crea una clase wrapper para el monto solicitado:
 
-<img width="466" alt="image" src="https://github.com/sivanahamer/software-design/assets/79823004/c9042efe-df9b-4e73-bcf2-0578ef8c819f">
+<img width="466" alt="image" src="https://github.com/sivanahamer/software-design/assets/79823004/c9042efe-df9b-4e73-bcf2-0578ef8c819f"> <\img>
 
 Ahora, se crea la clase que va a servir como Handler y cuyos hijos serán los Handlers concretos. Esta va a tener el método para definir su sucesor y el método para procesar el request.
 
-<img width="594" alt="image" src="https://github.com/sivanahamer/software-design/assets/79823004/6da5a4f1-49fd-422f-92ef-7b5df5268940">
+<img width="594" alt="image" src="https://github.com/sivanahamer/software-design/assets/79823004/6da5a4f1-49fd-422f-92ef-7b5df5268940"> <\img>
 
 Ahora se realizan las 3 clases de ConcreteHandlers, que corresponden a los 3 dispensadores. Cada una sobreescribe los dos métodos anteriores:
 
-<img width="602" alt="image" src="https://github.com/sivanahamer/software-design/assets/79823004/99583905-c949-4b7e-a4f9-b60fee1413f8">
+<img width="602" alt="image" src="https://github.com/sivanahamer/software-design/assets/79823004/99583905-c949-4b7e-a4f9-b60fee1413f8"> <\img>
 
-<img width="598" alt="image" src="https://github.com/sivanahamer/software-design/assets/79823004/177a4950-9c44-44ff-8617-0ae0eed57252">
+<img width="598" alt="image" src="https://github.com/sivanahamer/software-design/assets/79823004/177a4950-9c44-44ff-8617-0ae0eed57252"> <\img>
 
-<img width="598" alt="image" src="https://github.com/sivanahamer/software-design/assets/79823004/706f9400-aeef-40bf-aa54-d8c58d8816f6">
+<img width="598" alt="image" src="https://github.com/sivanahamer/software-design/assets/79823004/706f9400-aeef-40bf-aa54-d8c58d8816f6"> <\img>
 
 Y finalmente, se crea la cadena y se configura el orden de la misma:
 
-<img width="601" alt="image" src="https://github.com/sivanahamer/software-design/assets/79823004/95c23d17-ec84-49bb-8974-58178f2490e6">
+<img width="601" alt="image" src="https://github.com/sivanahamer/software-design/assets/79823004/95c23d17-ec84-49bb-8974-58178f2490e6"> <\img>
 
 ## Consecuencias
 
