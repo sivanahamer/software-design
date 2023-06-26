@@ -128,7 +128,7 @@ Si desea ver el código y probarlo tenga en cuenta las siguientes indicaciones:
 
 4. Luego irese a la carpeta con el src y el makefile y hacer poner **make** en la terminal para compilar
 
-5. Luego ejecute el código con ./bin/archivo.exe
+5. Luego ejecute el código con ./bin/nombre_archivo.exe
 
 ## **Presentación**
 
