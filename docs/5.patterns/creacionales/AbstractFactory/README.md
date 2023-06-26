@@ -114,9 +114,9 @@ La idea de la lógica de la implementación de este patrón es crear fábricas (
 
 ## **Ejemplo en código**
 
-Recuerda el ejemplo sobre mediación virtual que se planteó anteriormente, pues se logró implementar en C++ utilizando el patrón de Abstract Factory. 
+Recuerda el ejemplo sobre mediación virtual que se planteó anteriormente?, pues se logró implementar en C++ utilizando el patrón de Abstract Factory. 
 
-
+Para poder ver el código en C++ vaya a la carpeta Code y allí siga las siguientes indicaciones para compilarlo y ejecutarlo
 
 Si desea ver el código y probarlo tenga en cuenta las siguientes indicaciones:
 
@@ -130,9 +130,9 @@ Si desea ver el código y probarlo tenga en cuenta las siguientes indicaciones:
 
 5. Luego ejecute el código con ./bin/archivo.exe
 
-### **Enlace para ver el código:**
+## **Presentación**
 
-[Carpeta con el código en C++"](./Ejemplo_en_C++/)
+Si desea ver la presentacion diríjase a la carpeta "Presentación" y allí encontrará la presentación utilizada para exponer este tema
 
 ## Bibliografía
 
