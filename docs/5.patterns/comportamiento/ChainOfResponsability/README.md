@@ -171,12 +171,3 @@ El patrón de Chain of Responsibility (COR) se relaciona con los siguientes patr
 2. **OOP** (Object-Oriented Programming): COR se basa en los principios de la programación orientada a objetos, como la encapsulación y la abstracción, al separar el procesamiento de una solicitud en objetos independientes y permitir que se agreguen o modifiquen.
 
 3. **DRY** (Don't Repeat Yourself): COR promueve la reutilización del código al permitir que múltiples objetos en la cadena manejen diferentes aspectos de una solicitud sin duplicar la lógica en cada uno de ellos, evitando así la repetición y mejorando la mantenibilidad.
-
-
-
-## Bibliografía
-
-Gamma, Erich et.al. “Design Patterns”. Addison-Wesley, 1995.
-
-
-Refactoring.Guru. (2023). Chain of Responsibility. Refactoring.Guru. [Hipervínculo](https://refactoring.guru/design-patterns/chain-of-responsibility)
